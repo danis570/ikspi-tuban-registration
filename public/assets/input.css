@@ -1,0 +1,160 @@
+/* ============================================
+   1. FONT FACE — self-hosted
+   ============================================ */
+
+/* Archivo Black (Hanya punya 1 weight: 400) */
+@font-face {
+   font-family: 'Archivo Black';
+   src: url('/assets/fonts/archivo-black-v23-latin-regular.woff2') format('woff2');
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+}
+
+/* Space Grotesk - Regular (400) */
+@font-face {
+   font-family: 'Space Grotesk';
+   src: url('/assets/fonts/space-grotesk-v22-latin-regular.woff2') format('woff2');
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+}
+
+/* Space Grotesk - Light (300) */
+@font-face {
+   font-family: 'Space Grotesk';
+   src: url('/assets/fonts/space-grotesk-v22-latin-300.woff2') format('woff2');
+   font-weight: 300;
+   font-style: normal;
+   font-display: swap;
+}
+
+/* Space Grotesk - Medium (500) */
+@font-face {
+   font-family: 'Space Grotesk';
+   src: url('/assets/fonts/space-grotesk-v22-latin-500.woff2') format('woff2');
+   font-weight: 500;
+   font-style: normal;
+   font-display: swap;
+}
+
+/* Space Grotesk - SemiBold (600) */
+@font-face {
+   font-family: 'Space Grotesk';
+   src: url('/assets/fonts/space-grotesk-v22-latin-600.woff2') format('woff2');
+   font-weight: 600;
+   font-style: normal;
+   font-display: swap;
+}
+
+/* Space Grotesk - Bold (700) */
+@font-face {
+   font-family: 'Space Grotesk';
+   src: url('/assets/fonts/space-grotesk-v22-latin-700.woff2') format('woff2');
+   font-weight: 700;
+   font-style: normal;
+   font-display: swap;
+}
+
+
+/* ============================================
+   2. IMPORT TAILWIND
+   ============================================ */
+@import "tailwindcss";
+
+
+/* ============================================
+   3. THEME — otomatis jadi class Tailwind
+   ============================================ */
+@theme {
+   /* BRAND */
+   --color-primary: #c81e1e;
+   --color-primary-hover: #a81616;
+   --color-primary-dark: #7a0f0f;
+   --color-primary-soft: #fde8e8;
+   --color-primary-ring: #f5a3a3;
+
+   /* TEXT */
+   --color-text: #1a1a1a;
+   --color-text-body: #3d3d3d;
+   --color-text-muted: #6b6b6b;
+   --color-text-invert: #fff8e1;
+
+   /* SURFACE */
+   --color-bg: #fdf8f0;
+   --color-surface: #ffffff;
+   --color-surface-hover: #fdf1d6;
+   --color-surface-active: #fbe3a8;
+
+   /* BORDER */
+   --color-border: #f0d9a8;
+   --color-border-strong: #e6c46b;
+
+   /* SIDEBAR */
+   --color-sidebar-bg: #0f0f0f;
+   --color-sidebar-text: #e6d9b8;
+   --color-sidebar-text-hover: #ffd94d;
+   --color-sidebar-hover: #1f1f1f;
+   --color-sidebar-active: #7a0f0f;
+   --color-sidebar-active-bar: #ffd700;
+
+   /* CTA */
+   --color-cta: #c81e1e;
+   --color-cta-hover: #a81616;
+   --color-cta-text: #fff8e1;
+
+   /* STATE */
+   --color-success: #2e8b2e;
+   --color-success-soft: #dcf5dc;
+   --color-warning: #e6b800;
+   --color-warning-soft: #fff8d6;
+   --color-danger: #a81616;
+   --color-danger-soft: #fde8e8;
+   --color-info: #1a6b8a;
+   --color-info-soft: #d6f0f7;
+
+   /* FONT — tambahkan fallback font */
+   --font-sans: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+   --font-display: 'Archivo Black', ui-sans-serif, system-ui, sans-serif;
+
+   /* SHADOW */
+   --shadow-brutal: 6px 6px 0px 0px var(--color-text);
+   --shadow-brutal-sm: 3px 3px 0px 0px var(--color-text);
+   --shadow-brutal-primary: 6px 6px 0px 0px var(--color-primary);
+}
+
+
+/* ============================================
+   4. BASE STYLE
+   ============================================ */
+body {
+   background-color: var(--color-bg);
+   color: var(--color-text-body);
+   overflow-x: hidden;
+   font-family: var(--font-sans);
+   /* Pastikan body pakai Space Grotesk */
+}
+
+.bg-grid-pattern {
+   background-image: radial-gradient(var(--color-text) 2px, transparent 2px);
+   background-size: 30px 30px;
+}
+
+::-webkit-scrollbar {
+   width: 16px;
+}
+
+::-webkit-scrollbar-track {
+   background: var(--color-surface);
+   border-left: 4px solid var(--color-text);
+}
+
+::-webkit-scrollbar-thumb {
+   background: var(--color-primary);
+   border: 4px solid var(--color-text);
+}
+
+::selection {
+   background-color: var(--color-text);
+   color: var(--color-primary);
+}
