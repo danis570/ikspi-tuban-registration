@@ -2,4 +2,6 @@ Web role management template
 * ADMIN
 * USER
 
-Not Use PHP Session for handling session
+Improvment
+* Update scale region dropdown
+* validation img dimension

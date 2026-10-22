@@ -1,0 +1,941 @@
+[00:00:00.000464600 / 00:00:00.000464600] [3032976 bytes] PHPUnit Started (PHPUnit 13.4.2 using PHP 8.5.11 (cli) on WINNT)
+[00:00:00.418677700 / 00:00:00.418213100] [18557968 bytes] Test Runner Configured
+[00:00:00.419045000 / 00:00:00.000367300] [18557968 bytes] Test Runner Triggered PHPUnit Deprecation (The "--log-events-verbose-text <file>" CLI option is deprecated and will be removed in PHPUnit 14. Use "--log-events-text <file> --with-telemetry" instead.)
+[00:00:00.420078300 / 00:00:00.001033300] [18557968 bytes] Event Facade Sealed
+[00:00:00.448834100 / 00:00:00.028755800] [20147704 bytes] Test Suite Loaded (112 tests)
+[00:00:00.449786000 / 00:00:00.000951900] [20147704 bytes] Test Runner Started
+[00:00:00.451120300 / 00:00:00.001334300] [20196040 bytes] Test Suite Sorted
+[00:00:00.451536500 / 00:00:00.000416200] [20196040 bytes] Test Runner Execution Started (112 tests)
+[00:00:00.451917100 / 00:00:00.000380600] [20196040 bytes] Test Suite Started (CLI Arguments, 112 tests)
+[00:00:00.452177900 / 00:00:00.000260800] [20196040 bytes] Test Suite Started (Danish\IkspiTubanRegistration\Config\DatabaseSeederTest, 2 tests)
+[00:00:00.452581300 / 00:00:00.000403400] [20236808 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Config\DatabaseSeederTest::testFirstStartSeeder)
+[00:00:00.474872600 / 00:00:00.022291300] [20668304 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Config\DatabaseSeederTest::setUp)
+[00:00:00.475140200 / 00:00:00.000267600] [20669680 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Config\DatabaseSeederTest::setUp
+[00:00:00.475427100 / 00:00:00.000286900] [20667784 bytes] Test Prepared (Danish\IkspiTubanRegistration\Config\DatabaseSeederTest::testFirstStartSeeder)
+[00:00:01.686706800 / 00:00:01.211279700] [20724136 bytes] Test Passed (Danish\IkspiTubanRegistration\Config\DatabaseSeederTest::testFirstStartSeeder)
+[00:00:01.687347100 / 00:00:00.000640300] [20724136 bytes] Test Finished (Danish\IkspiTubanRegistration\Config\DatabaseSeederTest::testFirstStartSeeder)
+[00:00:01.688550600 / 00:00:00.001203500] [20724136 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Config\DatabaseSeederTest::testFirstAfterStartSeeder)
+[00:00:01.692678800 / 00:00:00.004128200] [20724136 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Config\DatabaseSeederTest::setUp)
+[00:00:01.693032600 / 00:00:00.000353800] [20724136 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Config\DatabaseSeederTest::setUp
+[00:00:01.693319500 / 00:00:00.000286900] [20670128 bytes] Test Prepared (Danish\IkspiTubanRegistration\Config\DatabaseSeederTest::testFirstAfterStartSeeder)
+[00:00:02.390840100 / 00:00:00.697520600] [20687920 bytes] Test Passed (Danish\IkspiTubanRegistration\Config\DatabaseSeederTest::testFirstAfterStartSeeder)
+[00:00:02.391468900 / 00:00:00.000628800] [20687920 bytes] Test Finished (Danish\IkspiTubanRegistration\Config\DatabaseSeederTest::testFirstAfterStartSeeder)
+[00:00:02.391910400 / 00:00:00.000441500] [20687920 bytes] Test Suite Finished (Danish\IkspiTubanRegistration\Config\DatabaseSeederTest, 2 tests)
+[00:00:02.392467800 / 00:00:00.000557400] [20687920 bytes] Test Suite Started (Danish\IkspiTubanRegistration\Config\DatabaseTest, 2 tests)
+[00:00:02.393369600 / 00:00:00.000901800] [20703904 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Config\DatabaseTest::testGetConnection)
+[00:00:02.394595900 / 00:00:00.001226300] [20703904 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Config\DatabaseTest::setUp)
+[00:00:02.394965300 / 00:00:00.000369400] [20703904 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Config\DatabaseTest::setUp
+[00:00:02.395331600 / 00:00:00.000366300] [20669664 bytes] Test Prepared (Danish\IkspiTubanRegistration\Config\DatabaseTest::testGetConnection)
+[00:00:02.396006600 / 00:00:00.000675000] [20685696 bytes] Test Passed (Danish\IkspiTubanRegistration\Config\DatabaseTest::testGetConnection)
+[00:00:02.396496300 / 00:00:00.000489700] [20685696 bytes] Test Finished (Danish\IkspiTubanRegistration\Config\DatabaseTest::testGetConnection)
+[00:00:02.396972800 / 00:00:00.000476500] [20685696 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Config\DatabaseTest::testConnectionSingletone)
+[00:00:02.397855600 / 00:00:00.000882800] [20685696 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Config\DatabaseTest::setUp)
+[00:00:02.398164200 / 00:00:00.000308600] [20685696 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Config\DatabaseTest::setUp
+[00:00:02.398424300 / 00:00:00.000260100] [20668352 bytes] Test Prepared (Danish\IkspiTubanRegistration\Config\DatabaseTest::testConnectionSingletone)
+[00:00:02.398783800 / 00:00:00.000359500] [20669728 bytes] Test Passed (Danish\IkspiTubanRegistration\Config\DatabaseTest::testConnectionSingletone)
+[00:00:02.399186200 / 00:00:00.000402400] [20669808 bytes] Test Finished (Danish\IkspiTubanRegistration\Config\DatabaseTest::testConnectionSingletone)
+[00:00:02.399558600 / 00:00:00.000372400] [20669808 bytes] Test Suite Finished (Danish\IkspiTubanRegistration\Config\DatabaseTest, 2 tests)
+[00:00:02.400071200 / 00:00:00.000512600] [20669808 bytes] Test Suite Started (Danish\IkspiTubanRegistration\Controller\HomeControllerTest, 3 tests)
+[00:00:02.400953400 / 00:00:00.000882200] [20702184 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Controller\HomeControllerTest::testGetHomePublic)
+[00:00:02.404912300 / 00:00:00.003958900] [20742872 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Controller\HomeControllerTest::setUp)
+[00:00:02.405271200 / 00:00:00.000358900] [20742872 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Controller\HomeControllerTest::setUp
+[00:00:02.405589200 / 00:00:00.000318000] [20699800 bytes] Test Prepared (Danish\IkspiTubanRegistration\Controller\HomeControllerTest::testGetHomePublic)
+[00:00:02.408582000 / 00:00:00.002992800] [20785928 bytes] Test Passed (Danish\IkspiTubanRegistration\Controller\HomeControllerTest::testGetHomePublic)
+[00:00:02.409469900 / 00:00:00.000887900] [20785928 bytes] Test Finished (Danish\IkspiTubanRegistration\Controller\HomeControllerTest::testGetHomePublic)
+[00:00:02.410182600 / 00:00:00.000712700] [20785928 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Controller\HomeControllerTest::testHomeUser)
+[00:00:02.411466600 / 00:00:00.001284000] [20785928 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Controller\HomeControllerTest::setUp)
+[00:00:02.411740200 / 00:00:00.000273600] [20785928 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Controller\HomeControllerTest::setUp
+[00:00:02.412117000 / 00:00:00.000376800] [20716496 bytes] Test Prepared (Danish\IkspiTubanRegistration\Controller\HomeControllerTest::testHomeUser)
+[00:00:02.419626000 / 00:00:00.007509000] [20807584 bytes] Test Passed (Danish\IkspiTubanRegistration\Controller\HomeControllerTest::testHomeUser)
+[00:00:02.420183000 / 00:00:00.000557000] [20807584 bytes] Test Finished (Danish\IkspiTubanRegistration\Controller\HomeControllerTest::testHomeUser)
+[00:00:02.421451300 / 00:00:00.001268300] [20807584 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Controller\HomeControllerTest::testHomeAdmin)
+[00:00:02.424888100 / 00:00:00.003436800] [20807584 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Controller\HomeControllerTest::setUp)
+[00:00:02.425261000 / 00:00:00.000372900] [20807584 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Controller\HomeControllerTest::setUp
+[00:00:02.425541500 / 00:00:00.000280500] [20727856 bytes] Test Prepared (Danish\IkspiTubanRegistration\Controller\HomeControllerTest::testHomeAdmin)
+[00:00:02.436849900 / 00:00:00.011308400] [20814072 bytes] Test Passed (Danish\IkspiTubanRegistration\Controller\HomeControllerTest::testHomeAdmin)
+[00:00:02.437352300 / 00:00:00.000502400] [20814072 bytes] Test Finished (Danish\IkspiTubanRegistration\Controller\HomeControllerTest::testHomeAdmin)
+[00:00:02.437930400 / 00:00:00.000578100] [20814072 bytes] Test Suite Finished (Danish\IkspiTubanRegistration\Controller\HomeControllerTest, 3 tests)
+[00:00:02.438358000 / 00:00:00.000427600] [20814072 bytes] Test Suite Started (Danish\IkspiTubanRegistration\Controller\ProfileControllerTest, 3 tests)
+[00:00:02.438911700 / 00:00:00.000553700] [20814072 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Controller\ProfileControllerTest::testSavePageForUser)
+[00:00:02.444645500 / 00:00:00.005733800] [20814072 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Controller\ProfileControllerTest::setUp)
+[00:00:02.445125000 / 00:00:00.000479500] [20814072 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Controller\ProfileControllerTest::setUp
+[00:00:02.445595400 / 00:00:00.000470400] [20752648 bytes] Test Prepared (Danish\IkspiTubanRegistration\Controller\ProfileControllerTest::testSavePageForUser)
+[00:00:02.453786800 / 00:00:00.008191400] [20837032 bytes] After Test Method Called (Danish\IkspiTubanRegistration\Controller\ProfileControllerTest::tearDown)
+[00:00:02.454166200 / 00:00:00.000379400] [20837032 bytes] After Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Controller\ProfileControllerTest::tearDown
+[00:00:02.454512000 / 00:00:00.000345800] [20837032 bytes] Test Passed (Danish\IkspiTubanRegistration\Controller\ProfileControllerTest::testSavePageForUser)
+[00:00:02.455005600 / 00:00:00.000493600] [20837032 bytes] Test Finished (Danish\IkspiTubanRegistration\Controller\ProfileControllerTest::testSavePageForUser)
+[00:00:02.455515500 / 00:00:00.000509900] [20837032 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Controller\ProfileControllerTest::testPostSaveSuccess)
+[00:00:02.460602700 / 00:00:00.005087200] [20837032 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Controller\ProfileControllerTest::setUp)
+[00:00:02.461164900 / 00:00:00.000562200] [20837032 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Controller\ProfileControllerTest::setUp
+[00:00:02.461451000 / 00:00:00.000286100] [20759408 bytes] Test Prepared (Danish\IkspiTubanRegistration\Controller\ProfileControllerTest::testPostSaveSuccess)
+[00:00:02.489265800 / 00:00:00.027814800] [29178056 bytes] After Test Method Called (Danish\IkspiTubanRegistration\Controller\ProfileControllerTest::tearDown)
+[00:00:02.489881500 / 00:00:00.000615700] [29178056 bytes] After Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Controller\ProfileControllerTest::tearDown
+[00:00:02.490161400 / 00:00:00.000279900] [29178056 bytes] Test Passed (Danish\IkspiTubanRegistration\Controller\ProfileControllerTest::testPostSaveSuccess)
+[00:00:02.490605200 / 00:00:00.000443800] [29178056 bytes] Test Finished (Danish\IkspiTubanRegistration\Controller\ProfileControllerTest::testPostSaveSuccess)
+[00:00:02.491207500 / 00:00:00.000602300] [29178056 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Controller\ProfileControllerTest::testPostSaveFailedValidation)
+[00:00:02.499558200 / 00:00:00.008350700] [29178056 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Controller\ProfileControllerTest::setUp)
+[00:00:02.500057300 / 00:00:00.000499100] [29178056 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Controller\ProfileControllerTest::setUp
+[00:00:02.500488200 / 00:00:00.000430900] [20779064 bytes] Test Prepared (Danish\IkspiTubanRegistration\Controller\ProfileControllerTest::testPostSaveFailedValidation)
+[00:00:02.510555300 / 00:00:00.010067100] [20872912 bytes] After Test Method Called (Danish\IkspiTubanRegistration\Controller\ProfileControllerTest::tearDown)
+[00:00:02.511161900 / 00:00:00.000606600] [20872912 bytes] After Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Controller\ProfileControllerTest::tearDown
+[00:00:02.511437400 / 00:00:00.000275500] [20872912 bytes] Test Passed (Danish\IkspiTubanRegistration\Controller\ProfileControllerTest::testPostSaveFailedValidation)
+[00:00:02.511858400 / 00:00:00.000421000] [20872912 bytes] Test Finished (Danish\IkspiTubanRegistration\Controller\ProfileControllerTest::testPostSaveFailedValidation)
+[00:00:02.512286400 / 00:00:00.000428000] [20872912 bytes] Test Suite Finished (Danish\IkspiTubanRegistration\Controller\ProfileControllerTest, 3 tests)
+[00:00:02.512657200 / 00:00:00.000370800] [20872912 bytes] Test Suite Started (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest, 6 tests)
+[00:00:02.513488600 / 00:00:00.000831400] [20872912 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::testSaveLevel1RedirectsGuestToLogin)
+[00:00:02.524562200 / 00:00:00.011073600] [21016560 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::setUp)
+[00:00:02.524905500 / 00:00:00.000343300] [21016560 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::setUp
+[00:00:02.525176000 / 00:00:00.000270500] [20946984 bytes] Test Prepared (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::testSaveLevel1RedirectsGuestToLogin)
+[00:00:02.526332800 / 00:00:00.001156800] [21050288 bytes] After Test Method Called (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::tearDown)
+[00:00:02.526710200 / 00:00:00.000377400] [21050288 bytes] After Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::tearDown
+[00:00:02.527028800 / 00:00:00.000318600] [21050288 bytes] Test Passed (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::testSaveLevel1RedirectsGuestToLogin)
+[00:00:02.527514600 / 00:00:00.000485800] [21050288 bytes] Test Finished (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::testSaveLevel1RedirectsGuestToLogin)
+[00:00:02.528072000 / 00:00:00.000557400] [21050288 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::testSaveLevel2RedirectsGuestToLogin)
+[00:00:02.530113200 / 00:00:00.002041200] [21050288 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::setUp)
+[00:00:02.530379500 / 00:00:00.000266300] [21050288 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::setUp
+[00:00:02.530674300 / 00:00:00.000294800] [21013120 bytes] Test Prepared (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::testSaveLevel2RedirectsGuestToLogin)
+[00:00:02.531029600 / 00:00:00.000355300] [21014560 bytes] After Test Method Called (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::tearDown)
+[00:00:02.531287500 / 00:00:00.000257900] [21015128 bytes] After Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::tearDown
+[00:00:02.531533300 / 00:00:00.000245800] [21015632 bytes] Test Passed (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::testSaveLevel2RedirectsGuestToLogin)
+[00:00:02.531951300 / 00:00:00.000418000] [21015632 bytes] Test Finished (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::testSaveLevel2RedirectsGuestToLogin)
+[00:00:02.532469200 / 00:00:00.000517900] [21015632 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::testPostSaveLevel1RedirectsGuestToLogin)
+[00:00:02.534549300 / 00:00:00.002080100] [21024280 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::setUp)
+[00:00:02.535031100 / 00:00:00.000481800] [21024280 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::setUp
+[00:00:02.535384000 / 00:00:00.000352900] [21011832 bytes] Test Prepared (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::testPostSaveLevel1RedirectsGuestToLogin)
+[00:00:02.536335800 / 00:00:00.000951800] [21013272 bytes] After Test Method Called (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::tearDown)
+[00:00:02.536706300 / 00:00:00.000370500] [21013840 bytes] After Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::tearDown
+[00:00:02.537039600 / 00:00:00.000333300] [21014344 bytes] Test Passed (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::testPostSaveLevel1RedirectsGuestToLogin)
+[00:00:02.537698400 / 00:00:00.000658800] [21014344 bytes] Test Finished (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::testPostSaveLevel1RedirectsGuestToLogin)
+[00:00:02.538338300 / 00:00:00.000639900] [21014344 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::testPostSaveLevel2RedirectsGuestToLogin)
+[00:00:02.541637300 / 00:00:00.003299000] [21022992 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::setUp)
+[00:00:02.542058000 / 00:00:00.000420700] [21022992 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::setUp
+[00:00:02.542408800 / 00:00:00.000350800] [21010544 bytes] Test Prepared (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::testPostSaveLevel2RedirectsGuestToLogin)
+[00:00:02.542900000 / 00:00:00.000491200] [21011984 bytes] After Test Method Called (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::tearDown)
+[00:00:02.543318200 / 00:00:00.000418200] [21012552 bytes] After Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::tearDown
+[00:00:02.543713800 / 00:00:00.000395600] [21013056 bytes] Test Passed (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::testPostSaveLevel2RedirectsGuestToLogin)
+[00:00:02.544266400 / 00:00:00.000552600] [21013056 bytes] Test Finished (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::testPostSaveLevel2RedirectsGuestToLogin)
+[00:00:02.544905100 / 00:00:00.000638700] [21013056 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::testSaveLevel1ShowsFormWhenPeriodIsActive)
+[00:00:02.546557300 / 00:00:00.001652200] [21021704 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::setUp)
+[00:00:02.546852900 / 00:00:00.000295600] [21021704 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::setUp
+[00:00:02.547123800 / 00:00:00.000270900] [21009256 bytes] Test Prepared (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::testSaveLevel1ShowsFormWhenPeriodIsActive)
+[00:00:02.556441500 / 00:00:00.009317700] [21153016 bytes] After Test Method Called (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::tearDown)
+[00:00:02.556837900 / 00:00:00.000396400] [21153016 bytes] After Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::tearDown
+[00:00:02.557126200 / 00:00:00.000288300] [21153016 bytes] Test Passed (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::testSaveLevel1ShowsFormWhenPeriodIsActive)
+[00:00:02.557579200 / 00:00:00.000453000] [21153016 bytes] Test Finished (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::testSaveLevel1ShowsFormWhenPeriodIsActive)
+[00:00:02.558299700 / 00:00:00.000720500] [21153016 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::testSaveLevel2ShowsFormWhenPeriodIsActive)
+[00:00:02.564595400 / 00:00:00.006295700] [21153016 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::setUp)
+[00:00:02.564915400 / 00:00:00.000320000] [21153016 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::setUp
+[00:00:02.565175200 / 00:00:00.000259800] [21027880 bytes] Test Prepared (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::testSaveLevel2ShowsFormWhenPeriodIsActive)
+[00:00:02.573487700 / 00:00:00.008312500] [21110712 bytes] After Test Method Called (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::tearDown)
+[00:00:02.573805700 / 00:00:00.000318000] [21110712 bytes] After Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::tearDown
+[00:00:02.574065400 / 00:00:00.000259700] [21110712 bytes] Test Passed (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::testSaveLevel2ShowsFormWhenPeriodIsActive)
+[00:00:02.574491200 / 00:00:00.000425800] [21110712 bytes] Test Finished (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest::testSaveLevel2ShowsFormWhenPeriodIsActive)
+[00:00:02.575177600 / 00:00:00.000686400] [21110712 bytes] Test Suite Finished (Danish\IkspiTubanRegistration\Controller\RegistrationControllerTest, 6 tests)
+[00:00:02.575911400 / 00:00:00.000733800] [21110712 bytes] Test Suite Started (Danish\IkspiTubanRegistration\Controller\UserControllerTest, 4 tests)
+[00:00:02.577348000 / 00:00:00.001436600] [21110712 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Controller\UserControllerTest::testDeleteUserSuccess)
+[00:00:02.581596100 / 00:00:00.004248100] [21110712 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Controller\UserControllerTest::setUp)
+[00:00:02.581866400 / 00:00:00.000270300] [21110712 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Controller\UserControllerTest::setUp
+[00:00:02.582149600 / 00:00:00.000283200] [21040520 bytes] Test Prepared (Danish\IkspiTubanRegistration\Controller\UserControllerTest::testDeleteUserSuccess)
+[00:00:03.243741400 / 00:00:00.661591800] [21057856 bytes] Test Passed (Danish\IkspiTubanRegistration\Controller\UserControllerTest::testDeleteUserSuccess)
+[00:00:03.244206000 / 00:00:00.000464600] [21057856 bytes] Test Finished (Danish\IkspiTubanRegistration\Controller\UserControllerTest::testDeleteUserSuccess)
+[00:00:03.244661800 / 00:00:00.000455800] [21057856 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Controller\UserControllerTest::testDeleteUserFailedUSerFound)
+[00:00:03.247330500 / 00:00:00.002668700] [21058760 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Controller\UserControllerTest::setUp)
+[00:00:03.247556600 / 00:00:00.000226100] [21058760 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Controller\UserControllerTest::setUp
+[00:00:03.247764300 / 00:00:00.000207700] [21041568 bytes] Test Prepared (Danish\IkspiTubanRegistration\Controller\UserControllerTest::testDeleteUserFailedUSerFound)
+[00:00:03.883435900 / 00:00:00.635671600] [21136960 bytes] Test Passed (Danish\IkspiTubanRegistration\Controller\UserControllerTest::testDeleteUserFailedUSerFound)
+[00:00:03.883828300 / 00:00:00.000392400] [21136960 bytes] Test Finished (Danish\IkspiTubanRegistration\Controller\UserControllerTest::testDeleteUserFailedUSerFound)
+[00:00:03.884388000 / 00:00:00.000559700] [21136960 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Controller\UserControllerTest::testGetAllUser)
+[00:00:03.887552100 / 00:00:00.003164100] [21136960 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Controller\UserControllerTest::setUp)
+[00:00:03.887827200 / 00:00:00.000275100] [21136960 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Controller\UserControllerTest::setUp
+[00:00:03.888102200 / 00:00:00.000275000] [21048848 bytes] Test Prepared (Danish\IkspiTubanRegistration\Controller\UserControllerTest::testGetAllUser)
+[00:00:04.520767500 / 00:00:00.632665300] [21131064 bytes] Test Passed (Danish\IkspiTubanRegistration\Controller\UserControllerTest::testGetAllUser)
+[00:00:04.521137400 / 00:00:00.000369900] [21131064 bytes] Test Finished (Danish\IkspiTubanRegistration\Controller\UserControllerTest::testGetAllUser)
+[00:00:04.521524100 / 00:00:00.000386700] [21131064 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Controller\UserControllerTest::testGetAllUserEmpty)
+[00:00:04.523752900 / 00:00:00.002228800] [21131064 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Controller\UserControllerTest::setUp)
+[00:00:04.523987200 / 00:00:00.000234300] [21131064 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Controller\UserControllerTest::setUp
+[00:00:04.524189300 / 00:00:00.000202100] [21047576 bytes] Test Prepared (Danish\IkspiTubanRegistration\Controller\UserControllerTest::testGetAllUserEmpty)
+[00:00:04.525596300 / 00:00:00.001407000] [21139112 bytes] Test Passed (Danish\IkspiTubanRegistration\Controller\UserControllerTest::testGetAllUserEmpty)
+[00:00:04.525939900 / 00:00:00.000343600] [21139112 bytes] Test Finished (Danish\IkspiTubanRegistration\Controller\UserControllerTest::testGetAllUserEmpty)
+[00:00:04.526287200 / 00:00:00.000347300] [21139112 bytes] Test Suite Finished (Danish\IkspiTubanRegistration\Controller\UserControllerTest, 4 tests)
+[00:00:04.526535500 / 00:00:00.000248300] [21139112 bytes] Test Suite Started (Danish\IkspiTubanRegistration\EnvTest, 1 test)
+[00:00:04.527251100 / 00:00:00.000715600] [21139112 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\EnvTest::testConfigDatabase)
+[00:00:04.527767200 / 00:00:00.000516100] [21047656 bytes] Test Prepared (Danish\IkspiTubanRegistration\EnvTest::testConfigDatabase)
+[00:00:04.529111800 / 00:00:00.001344600] [21060704 bytes] Test Passed (Danish\IkspiTubanRegistration\EnvTest::testConfigDatabase)
+[00:00:04.529689400 / 00:00:00.000577600] [21060704 bytes] Test Finished (Danish\IkspiTubanRegistration\EnvTest::testConfigDatabase)
+[00:00:04.530227700 / 00:00:00.000538300] [21060704 bytes] Test Suite Finished (Danish\IkspiTubanRegistration\EnvTest, 1 test)
+[00:00:04.530619000 / 00:00:00.000391300] [21060704 bytes] Test Suite Started (Danish\IkspiTubanRegistration\Middleware\MustAdminMiddlewareTest, 2 tests)
+[00:00:04.531413800 / 00:00:00.000794800] [21081640 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Middleware\MustAdminMiddlewareTest::testUserAccessAdmin)
+[00:00:04.533270100 / 00:00:00.001856300] [21093280 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Middleware\MustAdminMiddlewareTest::setUp)
+[00:00:04.533493500 / 00:00:00.000223400] [21093280 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Middleware\MustAdminMiddlewareTest::setUp
+[00:00:04.533774000 / 00:00:00.000280500] [21052184 bytes] Test Prepared (Danish\IkspiTubanRegistration\Middleware\MustAdminMiddlewareTest::testUserAccessAdmin)
+[00:00:05.134652600 / 00:00:00.600878600] [21070144 bytes] Test Passed (Danish\IkspiTubanRegistration\Middleware\MustAdminMiddlewareTest::testUserAccessAdmin)
+[00:00:05.135025100 / 00:00:00.000372500] [21070144 bytes] Test Finished (Danish\IkspiTubanRegistration\Middleware\MustAdminMiddlewareTest::testUserAccessAdmin)
+[00:00:05.135422500 / 00:00:00.000397400] [21070144 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Middleware\MustAdminMiddlewareTest::testAdminAccessAdmin)
+[00:00:05.136172700 / 00:00:00.000750200] [21070144 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Middleware\MustAdminMiddlewareTest::setUp)
+[00:00:05.136405500 / 00:00:00.000232800] [21070144 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Middleware\MustAdminMiddlewareTest::setUp
+[00:00:05.136634500 / 00:00:00.000229000] [21050880 bytes] Test Prepared (Danish\IkspiTubanRegistration\Middleware\MustAdminMiddlewareTest::testAdminAccessAdmin)
+[00:00:05.139917800 / 00:00:00.003283300] [21068840 bytes] Test Passed (Danish\IkspiTubanRegistration\Middleware\MustAdminMiddlewareTest::testAdminAccessAdmin)
+[00:00:05.140381400 / 00:00:00.000463600] [21068840 bytes] Test Finished (Danish\IkspiTubanRegistration\Middleware\MustAdminMiddlewareTest::testAdminAccessAdmin)
+[00:00:05.140740900 / 00:00:00.000359500] [21068840 bytes] Test Suite Finished (Danish\IkspiTubanRegistration\Middleware\MustAdminMiddlewareTest, 2 tests)
+[00:00:05.141041800 / 00:00:00.000300900] [21068840 bytes] Test Suite Started (Danish\IkspiTubanRegistration\MustLoginMiddlewareTest, 2 tests)
+[00:00:05.141646000 / 00:00:00.000604200] [21084128 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\MustLoginMiddlewareTest::testNotLogin)
+[00:00:05.142940600 / 00:00:00.001294600] [21095832 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\MustLoginMiddlewareTest::setUp)
+[00:00:05.143114600 / 00:00:00.000174000] [21095832 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\MustLoginMiddlewareTest::setUp
+[00:00:05.143337800 / 00:00:00.000223200] [21054128 bytes] Test Prepared (Danish\IkspiTubanRegistration\MustLoginMiddlewareTest::testNotLogin)
+[00:00:05.143624000 / 00:00:00.000286200] [21055488 bytes] Test Passed (Danish\IkspiTubanRegistration\MustLoginMiddlewareTest::testNotLogin)
+[00:00:05.143936900 / 00:00:00.000312900] [21055568 bytes] Test Finished (Danish\IkspiTubanRegistration\MustLoginMiddlewareTest::testNotLogin)
+[00:00:05.144337700 / 00:00:00.000400800] [21055568 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\MustLoginMiddlewareTest::testAfterLogin)
+[00:00:05.145177000 / 00:00:00.000839300] [21065848 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\MustLoginMiddlewareTest::setUp)
+[00:00:05.145392400 / 00:00:00.000215400] [21065848 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\MustLoginMiddlewareTest::setUp
+[00:00:05.145616700 / 00:00:00.000224300] [21052776 bytes] Test Prepared (Danish\IkspiTubanRegistration\MustLoginMiddlewareTest::testAfterLogin)
+[00:00:05.149410400 / 00:00:00.003793700] [21070736 bytes] Test Passed (Danish\IkspiTubanRegistration\MustLoginMiddlewareTest::testAfterLogin)
+[00:00:05.149860900 / 00:00:00.000450500] [21070736 bytes] Test Finished (Danish\IkspiTubanRegistration\MustLoginMiddlewareTest::testAfterLogin)
+[00:00:05.150213000 / 00:00:00.000352100] [21070736 bytes] Test Suite Finished (Danish\IkspiTubanRegistration\MustLoginMiddlewareTest, 2 tests)
+[00:00:05.150472300 / 00:00:00.000259300] [21070736 bytes] Test Suite Started (Danish\IkspiTubanRegistration\Middleware\MustNotLoginMiddlewareTest, 2 tests)
+[00:00:05.151065500 / 00:00:00.000593200] [21086248 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Middleware\MustNotLoginMiddlewareTest::testAfterLogin)
+[00:00:05.152099100 / 00:00:00.001033600] [21097664 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Middleware\MustNotLoginMiddlewareTest::setUp)
+[00:00:05.152285300 / 00:00:00.000186200] [21097664 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Middleware\MustNotLoginMiddlewareTest::setUp
+[00:00:05.152504300 / 00:00:00.000219000] [21055992 bytes] Test Prepared (Danish\IkspiTubanRegistration\Middleware\MustNotLoginMiddlewareTest::testAfterLogin)
+[00:00:05.155916500 / 00:00:00.003412200] [21073952 bytes] Test Passed (Danish\IkspiTubanRegistration\Middleware\MustNotLoginMiddlewareTest::testAfterLogin)
+[00:00:05.156371600 / 00:00:00.000455100] [21073952 bytes] Test Finished (Danish\IkspiTubanRegistration\Middleware\MustNotLoginMiddlewareTest::testAfterLogin)
+[00:00:05.157789200 / 00:00:00.001417600] [21073952 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Middleware\MustNotLoginMiddlewareTest::testIsNotLogin)
+[00:00:05.158873700 / 00:00:00.001084500] [21073952 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Middleware\MustNotLoginMiddlewareTest::setUp)
+[00:00:05.159188100 / 00:00:00.000314400] [21073952 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Middleware\MustNotLoginMiddlewareTest::setUp
+[00:00:05.159482700 / 00:00:00.000294600] [21054688 bytes] Test Prepared (Danish\IkspiTubanRegistration\Middleware\MustNotLoginMiddlewareTest::testIsNotLogin)
+[00:00:05.160633000 / 00:00:00.001150300] [21072024 bytes] Test Passed (Danish\IkspiTubanRegistration\Middleware\MustNotLoginMiddlewareTest::testIsNotLogin)
+[00:00:05.161129000 / 00:00:00.000496000] [21072024 bytes] Test Finished (Danish\IkspiTubanRegistration\Middleware\MustNotLoginMiddlewareTest::testIsNotLogin)
+[00:00:05.161618900 / 00:00:00.000489900] [21072024 bytes] Test Suite Finished (Danish\IkspiTubanRegistration\Middleware\MustNotLoginMiddlewareTest, 2 tests)
+[00:00:05.162188200 / 00:00:00.000569300] [21072024 bytes] Test Suite Started (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest, 7 tests)
+[00:00:05.163030800 / 00:00:00.000842600] [21088688 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindProvincesSuccess)
+[00:00:05.163837000 / 00:00:00.000806200] [21088688 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::setUp)
+[00:00:05.164089900 / 00:00:00.000252900] [21088688 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::setUp
+[00:00:05.164332200 / 00:00:00.000242300] [21058152 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindProvincesSuccess)
+[00:00:05.165783400 / 00:00:00.001451200] [21112288 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindProvincesSuccess)
+[00:00:05.166230200 / 00:00:00.000446800] [21112288 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindProvincesSuccess)
+[00:00:05.166734400 / 00:00:00.000504200] [21112288 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindRegenciesSuccess)
+[00:00:05.167591800 / 00:00:00.000857400] [21112288 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::setUp)
+[00:00:05.167915900 / 00:00:00.000324100] [21112288 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::setUp
+[00:00:05.168181500 / 00:00:00.000265600] [21057360 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindRegenciesSuccess)
+[00:00:05.170633600 / 00:00:00.002452100] [21075320 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindRegenciesSuccess)
+[00:00:05.171226700 / 00:00:00.000593100] [21075320 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindRegenciesSuccess)
+[00:00:05.171778300 / 00:00:00.000551600] [21075320 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindRegenciesWithUnknownProvinceReturnsEmptyArray)
+[00:00:05.172898600 / 00:00:00.001120300] [21075320 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::setUp)
+[00:00:05.173219900 / 00:00:00.000321300] [21075320 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::setUp
+[00:00:05.174862400 / 00:00:00.001642500] [21056136 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindRegenciesWithUnknownProvinceReturnsEmptyArray)
+[00:00:05.176011700 / 00:00:00.001149300] [21073464 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindRegenciesWithUnknownProvinceReturnsEmptyArray)
+[00:00:05.176513300 / 00:00:00.000501600] [21073464 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindRegenciesWithUnknownProvinceReturnsEmptyArray)
+[00:00:05.177089500 / 00:00:00.000576200] [21073464 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindDistrictsSuccess)
+[00:00:05.177968500 / 00:00:00.000879000] [21073464 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::setUp)
+[00:00:05.178273900 / 00:00:00.000305400] [21073464 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::setUp
+[00:00:05.178542600 / 00:00:00.000268700] [21054944 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindDistrictsSuccess)
+[00:00:05.180230400 / 00:00:00.001687800] [21084344 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindDistrictsSuccess)
+[00:00:05.180614100 / 00:00:00.000383700] [21084344 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindDistrictsSuccess)
+[00:00:05.181535100 / 00:00:00.000921000] [21084344 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindDistrictsWithUnknownRegencyReturnsEmptyArray)
+[00:00:05.182404400 / 00:00:00.000869300] [21084344 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::setUp)
+[00:00:05.182628100 / 00:00:00.000223700] [21084344 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::setUp
+[00:00:05.182860700 / 00:00:00.000232600] [21053720 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindDistrictsWithUnknownRegencyReturnsEmptyArray)
+[00:00:05.184079500 / 00:00:00.001218800] [21071048 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindDistrictsWithUnknownRegencyReturnsEmptyArray)
+[00:00:05.184579700 / 00:00:00.000500200] [21071048 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindDistrictsWithUnknownRegencyReturnsEmptyArray)
+[00:00:05.185069900 / 00:00:00.000490200] [21071048 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindVillagesSuccess)
+[00:00:05.185982400 / 00:00:00.000912500] [21071048 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::setUp)
+[00:00:05.186371400 / 00:00:00.000389000] [21071048 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::setUp
+[00:00:05.186879400 / 00:00:00.000508000] [21052528 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindVillagesSuccess)
+[00:00:05.188568400 / 00:00:00.001689000] [21081408 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindVillagesSuccess)
+[00:00:05.189135800 / 00:00:00.000567400] [21081408 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindVillagesSuccess)
+[00:00:05.189737000 / 00:00:00.000601200] [21081408 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindVillagesWithUnknownDistrictReturnsEmptyArray)
+[00:00:05.191914300 / 00:00:00.002177300] [21081408 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::setUp)
+[00:00:05.192322000 / 00:00:00.000407700] [21081408 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::setUp
+[00:00:05.192757800 / 00:00:00.000435800] [21055144 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindVillagesWithUnknownDistrictReturnsEmptyArray)
+[00:00:05.193814700 / 00:00:00.001056900] [21072512 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindVillagesWithUnknownDistrictReturnsEmptyArray)
+[00:00:05.194316600 / 00:00:00.000501900] [21072512 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest::testFindVillagesWithUnknownDistrictReturnsEmptyArray)
+[00:00:05.194732200 / 00:00:00.000415600] [21072512 bytes] Test Suite Finished (Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepositoryTest, 7 tests)
+[00:00:05.195117800 / 00:00:00.000385600] [21072512 bytes] Test Suite Started (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest, 6 tests)
+[00:00:05.195737000 / 00:00:00.000619200] [21087848 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::testFindByUserIdSuccess)
+[00:00:05.197903600 / 00:00:00.002166600] [21087848 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::setUp)
+[00:00:05.198199900 / 00:00:00.000296300] [21087848 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::setUp
+[00:00:05.198459500 / 00:00:00.000259600] [21053512 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::testFindByUserIdSuccess)
+[00:00:05.201529000 / 00:00:00.003069500] [21070896 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::testFindByUserIdSuccess)
+[00:00:05.202486500 / 00:00:00.000957500] [21070896 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::testFindByUserIdSuccess)
+[00:00:05.203411900 / 00:00:00.000925400] [21070896 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::testFindByUserIdFailedUserFound)
+[00:00:05.208190100 / 00:00:00.004778200] [21070896 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::setUp)
+[00:00:05.208604400 / 00:00:00.000414300] [21070896 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::setUp
+[00:00:05.208953700 / 00:00:00.000349300] [21052208 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::testFindByUserIdFailedUserFound)
+[00:00:05.212186000 / 00:00:00.003232300] [21069160 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::testFindByUserIdFailedUserFound)
+[00:00:05.212614100 / 00:00:00.000428100] [21069160 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::testFindByUserIdFailedUserFound)
+[00:00:05.213004300 / 00:00:00.000390200] [21069160 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::testSaveProfileSuccess)
+[00:00:05.216614100 / 00:00:00.003609800] [21069160 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::setUp)
+[00:00:05.216963400 / 00:00:00.000349300] [21069160 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::setUp
+[00:00:05.217289200 / 00:00:00.000325800] [21050952 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::testSaveProfileSuccess)
+[00:00:05.222553000 / 00:00:00.005263800] [21052328 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::testSaveProfileSuccess)
+[00:00:05.223183000 / 00:00:00.000630000] [21052408 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::testSaveProfileSuccess)
+[00:00:05.223851000 / 00:00:00.000668000] [21052408 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::testSaveFailedUserIdFound)
+[00:00:05.227357100 / 00:00:00.003506100] [21063088 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::setUp)
+[00:00:05.227734600 / 00:00:00.000377500] [21063088 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::setUp
+[00:00:05.228022600 / 00:00:00.000288000] [21049648 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::testSaveFailedUserIdFound)
+[00:00:05.230114400 / 00:00:00.002091800] [21060640 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::testSaveFailedUserIdFound)
+[00:00:05.230568500 / 00:00:00.000454100] [21060640 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::testSaveFailedUserIdFound)
+[00:00:05.231060600 / 00:00:00.000492100] [21060640 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::testSaveUpdateSuccess)
+[00:00:05.232661200 / 00:00:00.001600600] [21061880 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::setUp)
+[00:00:05.233088700 / 00:00:00.000427500] [21061880 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::setUp
+[00:00:05.233449700 / 00:00:00.000361000] [21048392 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::testSaveUpdateSuccess)
+[00:00:05.237906600 / 00:00:00.004456900] [21049768 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::testSaveUpdateSuccess)
+[00:00:05.238401900 / 00:00:00.000495300] [21049904 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::testSaveUpdateSuccess)
+[00:00:05.239175400 / 00:00:00.000773500] [21049904 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::testSaveUpdateFailedFoundUserId)
+[00:00:05.242234200 / 00:00:00.003058800] [21060584 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::setUp)
+[00:00:05.242708000 / 00:00:00.000473800] [21060584 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::setUp
+[00:00:05.243133300 / 00:00:00.000425300] [21047088 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::testSaveUpdateFailedFoundUserId)
+[00:00:05.247826500 / 00:00:00.004693200] [21048528 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::testSaveUpdateFailedFoundUserId)
+[00:00:05.248305700 / 00:00:00.000479200] [21048664 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest::testSaveUpdateFailedFoundUserId)
+[00:00:05.248706300 / 00:00:00.000400600] [21048664 bytes] Test Suite Finished (Danish\IkspiTubanRegistration\Repository\ProfileRepositoryTest, 6 tests)
+[00:00:05.249012400 / 00:00:00.000306100] [21048664 bytes] Test Suite Started (Danish\IkspiTubanRegistration\Repository\RegistrationPeriodRepositoryTest, 3 tests)
+[00:00:05.249717100 / 00:00:00.000704700] [21079792 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\RegistrationPeriodRepositoryTest::testSaveSuccess)
+[00:00:05.251646100 / 00:00:00.001929000] [21079792 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\RegistrationPeriodRepositoryTest::setUp)
+[00:00:05.251914900 / 00:00:00.000268800] [21079792 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\RegistrationPeriodRepositoryTest::setUp
+[00:00:05.252180200 / 00:00:00.000265300] [21045640 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\RegistrationPeriodRepositoryTest::testSaveSuccess)
+[00:00:05.255073600 / 00:00:00.002893400] [21064944 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\RegistrationPeriodRepositoryTest::testSaveSuccess)
+[00:00:05.255709300 / 00:00:00.000635700] [21064944 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\RegistrationPeriodRepositoryTest::testSaveSuccess)
+[00:00:05.258348000 / 00:00:00.002638700] [21064944 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\RegistrationPeriodRepositoryTest::testFindByLevelAndBatch)
+[00:00:05.261483500 / 00:00:00.003135500] [21064944 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\RegistrationPeriodRepositoryTest::setUp)
+[00:00:05.261768400 / 00:00:00.000284900] [21064944 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\RegistrationPeriodRepositoryTest::setUp
+[00:00:05.262014600 / 00:00:00.000246200] [21044384 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\RegistrationPeriodRepositoryTest::testFindByLevelAndBatch)
+[00:00:05.264365100 / 00:00:00.002350500] [21063800 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\RegistrationPeriodRepositoryTest::testFindByLevelAndBatch)
+[00:00:05.264892200 / 00:00:00.000527100] [21063800 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\RegistrationPeriodRepositoryTest::testFindByLevelAndBatch)
+[00:00:05.265443200 / 00:00:00.000551000] [21063800 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\RegistrationPeriodRepositoryTest::testUpdateSuccess)
+[00:00:05.268872900 / 00:00:00.003429700] [21063800 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\RegistrationPeriodRepositoryTest::setUp)
+[00:00:05.269270600 / 00:00:00.000397700] [21063800 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\RegistrationPeriodRepositoryTest::setUp
+[00:00:05.269590200 / 00:00:00.000319600] [21043128 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\RegistrationPeriodRepositoryTest::testUpdateSuccess)
+[00:00:05.274850500 / 00:00:00.005260300] [21063024 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\RegistrationPeriodRepositoryTest::testUpdateSuccess)
+[00:00:05.275495300 / 00:00:00.000644800] [21063024 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\RegistrationPeriodRepositoryTest::testUpdateSuccess)
+[00:00:05.276010300 / 00:00:00.000515000] [21063024 bytes] Test Suite Finished (Danish\IkspiTubanRegistration\Repository\RegistrationPeriodRepositoryTest, 3 tests)
+[00:00:05.276538200 / 00:00:00.000527900] [21063024 bytes] Test Suite Started (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest, 6 tests)
+[00:00:05.277258400 / 00:00:00.000720200] [21077384 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::testSaveSuccess)
+[00:00:05.284053500 / 00:00:00.006795100] [21077384 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::setUp)
+[00:00:05.284438100 / 00:00:00.000384600] [21077384 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::setUp
+[00:00:05.284804500 / 00:00:00.000366400] [21043072 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::testSaveSuccess)
+[00:00:05.288828500 / 00:00:00.004024000] [21082632 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::testSaveSuccess)
+[00:00:05.289613600 / 00:00:00.000785100] [21082632 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::testSaveSuccess)
+[00:00:05.290164200 / 00:00:00.000550600] [21082632 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::testUpdateSuccess)
+[00:00:05.297803500 / 00:00:00.007639300] [21082632 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::setUp)
+[00:00:05.298174000 / 00:00:00.000370500] [21082632 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::setUp
+[00:00:05.298475500 / 00:00:00.000301500] [21043480 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::testUpdateSuccess)
+[00:00:05.305447300 / 00:00:00.006971800] [21063456 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::testUpdateSuccess)
+[00:00:05.306189200 / 00:00:00.000741900] [21063456 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::testUpdateSuccess)
+[00:00:05.307581100 / 00:00:00.001391900] [21063456 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::testUpdateWithoutIdReturnsFalse)
+[00:00:05.315905600 / 00:00:00.008324500] [21063456 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::setUp)
+[00:00:05.316328700 / 00:00:00.000423100] [21063456 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::setUp
+[00:00:05.316632200 / 00:00:00.000303500] [21042176 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::testUpdateWithoutIdReturnsFalse)
+[00:00:05.316992900 / 00:00:00.000360700] [21043616 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::testUpdateWithoutIdReturnsFalse)
+[00:00:05.317488200 / 00:00:00.000495300] [21043696 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::testUpdateWithoutIdReturnsFalse)
+[00:00:05.318235600 / 00:00:00.000747400] [21043696 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::testFindByIdSuccess)
+[00:00:05.327337500 / 00:00:00.009101900] [21054304 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::setUp)
+[00:00:05.327733400 / 00:00:00.000395900] [21054304 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::setUp
+[00:00:05.328011900 / 00:00:00.000278500] [21040920 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::testFindByIdSuccess)
+[00:00:05.330092000 / 00:00:00.002080100] [21060880 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::testFindByIdSuccess)
+[00:00:05.330630900 / 00:00:00.000538900] [21060880 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::testFindByIdSuccess)
+[00:00:05.331204800 / 00:00:00.000573900] [21060880 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::testFindByIdNotFoundReturnsNull)
+[00:00:05.340106100 / 00:00:00.008901300] [21060880 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::setUp)
+[00:00:05.340587700 / 00:00:00.000481600] [21060880 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::setUp
+[00:00:05.341038500 / 00:00:00.000450800] [21039664 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::testFindByIdNotFoundReturnsNull)
+[00:00:05.342516200 / 00:00:00.001477700] [21056848 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::testFindByIdNotFoundReturnsNull)
+[00:00:05.343075200 / 00:00:00.000559000] [21056848 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::testFindByIdNotFoundReturnsNull)
+[00:00:05.345643400 / 00:00:00.002568200] [21056848 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::testDeleteAllSuccess)
+[00:00:05.358296300 / 00:00:00.012652900] [21056848 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::setUp)
+[00:00:05.358701700 / 00:00:00.000405400] [21056848 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::setUp
+[00:00:05.359001900 / 00:00:00.000300200] [21038408 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::testDeleteAllSuccess)
+[00:00:05.365619000 / 00:00:00.006617100] [21058368 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::testDeleteAllSuccess)
+[00:00:05.366132500 / 00:00:00.000513500] [21058368 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest::testDeleteAllSuccess)
+[00:00:05.366566200 / 00:00:00.000433700] [21058368 bytes] Test Suite Finished (Danish\IkspiTubanRegistration\Repository\RegistrationRepositoryTest, 6 tests)
+[00:00:05.367089700 / 00:00:00.000523500] [21058368 bytes] Test Suite Started (Danish\IkspiTubanRegistration\Repository\SessionReositoryTest, 4 tests)
+[00:00:05.368010700 / 00:00:00.000921000] [21071208 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\SessionReositoryTest::testSave)
+[00:00:05.371686400 / 00:00:00.003675700] [21071208 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\SessionReositoryTest::setUp)
+[00:00:05.372217300 / 00:00:00.000530900] [21071208 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\SessionReositoryTest::setUp
+[00:00:05.372575200 / 00:00:00.000357900] [21037064 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\SessionReositoryTest::testSave)
+[00:00:05.375772300 / 00:00:00.003197100] [21038424 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\SessionReositoryTest::testSave)
+[00:00:05.376244200 / 00:00:00.000471900] [21038504 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\SessionReositoryTest::testSave)
+[00:00:05.376818700 / 00:00:00.000574500] [21038504 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\SessionReositoryTest::testFindByUserId)
+[00:00:05.379235100 / 00:00:00.002416400] [21049152 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\SessionReositoryTest::setUp)
+[00:00:05.379690000 / 00:00:00.000454900] [21049152 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\SessionReositoryTest::setUp
+[00:00:05.380106400 / 00:00:00.000416400] [21035712 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\SessionReositoryTest::testFindByUserId)
+[00:00:05.383068100 / 00:00:00.002961700] [21053136 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\SessionReositoryTest::testFindByUserId)
+[00:00:05.383565200 / 00:00:00.000497100] [21053136 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\SessionReositoryTest::testFindByUserId)
+[00:00:05.384025900 / 00:00:00.000460700] [21053136 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\SessionReositoryTest::testDeleteByUserId)
+[00:00:05.386224500 / 00:00:00.002198600] [21053136 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\SessionReositoryTest::setUp)
+[00:00:05.386553200 / 00:00:00.000328700] [21053136 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\SessionReositoryTest::setUp
+[00:00:05.386817000 / 00:00:00.000263800] [21034440 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\SessionReositoryTest::testDeleteByUserId)
+[00:00:05.390825300 / 00:00:00.004008300] [21051472 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\SessionReositoryTest::testDeleteByUserId)
+[00:00:05.391314200 / 00:00:00.000488900] [21051472 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\SessionReositoryTest::testDeleteByUserId)
+[00:00:05.391864100 / 00:00:00.000549900] [21051472 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\SessionReositoryTest::testDeleteById)
+[00:00:05.394349100 / 00:00:00.002485000] [21051472 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\SessionReositoryTest::setUp)
+[00:00:05.394728400 / 00:00:00.000379300] [21051472 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\SessionReositoryTest::setUp
+[00:00:05.395003200 / 00:00:00.000274800] [21033104 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\SessionReositoryTest::testDeleteById)
+[00:00:05.401130700 / 00:00:00.006127500] [21050136 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\SessionReositoryTest::testDeleteById)
+[00:00:05.401704700 / 00:00:00.000574000] [21050136 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\SessionReositoryTest::testDeleteById)
+[00:00:05.402168100 / 00:00:00.000463400] [21050136 bytes] Test Suite Finished (Danish\IkspiTubanRegistration\Repository\SessionReositoryTest, 4 tests)
+[00:00:05.402610500 / 00:00:00.000442400] [21050136 bytes] Test Suite Started (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest, 10 tests)
+[00:00:05.403297000 / 00:00:00.000686500] [21067488 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testDeleteByIdSuccess)
+[00:00:05.405399500 / 00:00:00.002102500] [21067488 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::setUp)
+[00:00:05.405985200 / 00:00:00.000585700] [21067488 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::setUp
+[00:00:05.406292300 / 00:00:00.000307100] [21032312 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testDeleteByIdSuccess)
+[00:00:05.413277900 / 00:00:00.006985600] [21049640 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testDeleteByIdSuccess)
+[00:00:05.415591600 / 00:00:00.002313700] [21049640 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testDeleteByIdSuccess)
+[00:00:05.419000000 / 00:00:00.003408400] [21049640 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testDeleteByIdFoundUser)
+[00:00:05.420283600 / 00:00:00.001283600] [21049640 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::setUp)
+[00:00:05.420710900 / 00:00:00.000427300] [21049640 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::setUp
+[00:00:05.421101300 / 00:00:00.000390400] [21031008 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testDeleteByIdFoundUser)
+[00:00:05.421926400 / 00:00:00.000825100] [21032384 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testDeleteByIdFoundUser)
+[00:00:05.422745800 / 00:00:00.000819400] [21032464 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testDeleteByIdFoundUser)
+[00:00:05.424351200 / 00:00:00.001605400] [21032464 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testFindAll)
+[00:00:05.425826400 / 00:00:00.001475200] [21043168 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::setUp)
+[00:00:05.426232100 / 00:00:00.000405700] [21043168 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::setUp
+[00:00:05.426520800 / 00:00:00.000288700] [21029672 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testFindAll)
+[00:00:05.428688100 / 00:00:00.002167300] [21046832 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testFindAll)
+[00:00:05.429166300 / 00:00:00.000478200] [21046832 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testFindAll)
+[00:00:05.429619300 / 00:00:00.000453000] [21046832 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testFindByEmail)
+[00:00:05.431973800 / 00:00:00.002354500] [21046832 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::setUp)
+[00:00:05.432356600 / 00:00:00.000382800] [21046832 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::setUp
+[00:00:05.432900200 / 00:00:00.000543600] [21028368 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testFindByEmail)
+[00:00:05.436244600 / 00:00:00.003344400] [21045696 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testFindByEmail)
+[00:00:05.436725700 / 00:00:00.000481100] [21045696 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testFindByEmail)
+[00:00:05.437182900 / 00:00:00.000457200] [21045696 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testsFindById)
+[00:00:05.439336100 / 00:00:00.002153200] [21045696 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::setUp)
+[00:00:05.439821600 / 00:00:00.000485500] [21045696 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::setUp
+[00:00:05.440111000 / 00:00:00.000289400] [21027064 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testsFindById)
+[00:00:05.442828000 / 00:00:00.002717000] [21044408 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testsFindById)
+[00:00:05.443581900 / 00:00:00.000753900] [21044408 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testsFindById)
+[00:00:05.444297100 / 00:00:00.000715200] [21044408 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testUpdatePasswordById)
+[00:00:05.446261100 / 00:00:00.001964000] [21044408 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::setUp)
+[00:00:05.446511700 / 00:00:00.000250600] [21044408 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::setUp
+[00:00:05.446790000 / 00:00:00.000278300] [21025792 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testUpdatePasswordById)
+[00:00:05.449965800 / 00:00:00.003175800] [21043120 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testUpdatePasswordById)
+[00:00:05.450542300 / 00:00:00.000576500] [21043120 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testUpdatePasswordById)
+[00:00:05.451458200 / 00:00:00.000915900] [21043120 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testUpdateEmailById)
+[00:00:05.458733900 / 00:00:00.007275700] [21043120 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::setUp)
+[00:00:05.459215800 / 00:00:00.000481900] [21043120 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::setUp
+[00:00:05.459568300 / 00:00:00.000352500] [21024488 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testUpdateEmailById)
+[00:00:05.466422400 / 00:00:00.006854100] [21025864 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testUpdateEmailById)
+[00:00:05.466922100 / 00:00:00.000499700] [21026000 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testUpdateEmailById)
+[00:00:05.467571700 / 00:00:00.000649600] [21026000 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testSaveSuccess)
+[00:00:05.470997000 / 00:00:00.003425300] [21036704 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::setUp)
+[00:00:05.471370600 / 00:00:00.000373600] [21036704 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::setUp
+[00:00:05.471625600 / 00:00:00.000255000] [21023152 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testSaveSuccess)
+[00:00:05.473668700 / 00:00:00.002043100] [21040496 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testSaveSuccess)
+[00:00:05.474136800 / 00:00:00.000468100] [21040496 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testSaveSuccess)
+[00:00:05.474700100 / 00:00:00.000563300] [21040496 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testSaveFailedDuplicateEmail)
+[00:00:05.477390300 / 00:00:00.002690200] [21040496 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::setUp)
+[00:00:05.477821300 / 00:00:00.000431000] [21040496 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::setUp
+[00:00:05.478295300 / 00:00:00.000474000] [21021880 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testSaveFailedDuplicateEmail)
+[00:00:05.482027100 / 00:00:00.003731800] [21032224 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testSaveFailedDuplicateEmail)
+[00:00:05.482772400 / 00:00:00.000745300] [21032224 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testSaveFailedDuplicateEmail)
+[00:00:05.483406600 / 00:00:00.000634200] [21032224 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testSaveFailedErrorValueRole)
+[00:00:05.490393300 / 00:00:00.006986700] [21034168 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::setUp)
+[00:00:05.490790100 / 00:00:00.000396800] [21034168 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::setUp
+[00:00:05.491063500 / 00:00:00.000273400] [21020624 bytes] Test Prepared (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testSaveFailedErrorValueRole)
+[00:00:05.491445400 / 00:00:00.000381900] [21028184 bytes] Test Passed (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testSaveFailedErrorValueRole)
+[00:00:05.491817900 / 00:00:00.000372500] [21028184 bytes] Test Finished (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest::testSaveFailedErrorValueRole)
+[00:00:05.492335700 / 00:00:00.000517800] [21028184 bytes] Test Suite Finished (Danish\IkspiTubanRegistration\Repository\UserRepositoryTest, 10 tests)
+[00:00:05.492718000 / 00:00:00.000382300] [21028184 bytes] Test Suite Started (Danish\IkspiTubanRegistration\Service\ProfileServiceTest, 2 tests)
+[00:00:05.493488800 / 00:00:00.000770800] [21051832 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\ProfileServiceTest::testSaveInCreate)
+[00:00:05.495435300 / 00:00:00.001946500] [21051832 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\ProfileServiceTest::setUp)
+[00:00:05.495749700 / 00:00:00.000314400] [21051832 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\ProfileServiceTest::setUp
+[00:00:05.496100800 / 00:00:00.000351100] [21018784 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\ProfileServiceTest::testSaveInCreate)
+[00:00:05.511245600 / 00:00:00.015144800] [29417336 bytes] After Test Method Called (Danish\IkspiTubanRegistration\Service\ProfileServiceTest::tearDown)
+[00:00:05.511997900 / 00:00:00.000752300] [29417336 bytes] After Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\ProfileServiceTest::tearDown
+[00:00:05.512353200 / 00:00:00.000355300] [29417336 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\ProfileServiceTest::testSaveInCreate)
+[00:00:05.512980100 / 00:00:00.000626900] [29417336 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\ProfileServiceTest::testSaveInCreate)
+[00:00:05.513509000 / 00:00:00.000528900] [29417336 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\ProfileServiceTest::testSaveInUpdate)
+[00:00:05.517034600 / 00:00:00.003525600] [29417336 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\ProfileServiceTest::setUp)
+[00:00:05.517372300 / 00:00:00.000337700] [29417336 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\ProfileServiceTest::setUp
+[00:00:05.517657200 / 00:00:00.000284900] [21017480 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\ProfileServiceTest::testSaveInUpdate)
+[00:00:05.555781500 / 00:00:00.038124300] [29416768 bytes] After Test Method Called (Danish\IkspiTubanRegistration\Service\ProfileServiceTest::tearDown)
+[00:00:05.556435100 / 00:00:00.000653600] [29416768 bytes] After Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\ProfileServiceTest::tearDown
+[00:00:05.556739400 / 00:00:00.000304300] [29416768 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\ProfileServiceTest::testSaveInUpdate)
+[00:00:05.557250000 / 00:00:00.000510600] [29416768 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\ProfileServiceTest::testSaveInUpdate)
+[00:00:05.557665800 / 00:00:00.000415800] [29416768 bytes] Test Suite Finished (Danish\IkspiTubanRegistration\Service\ProfileServiceTest, 2 tests)
+[00:00:05.558112800 / 00:00:00.000447000] [29416768 bytes] Test Suite Started (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest, 13 tests)
+[00:00:05.558817800 / 00:00:00.000705000] [29416768 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInCreate)
+[00:00:05.561480500 / 00:00:00.002662700] [29416768 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::setUp)
+[00:00:05.561784500 / 00:00:00.000304000] [29416768 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::setUp
+[00:00:05.562034600 / 00:00:00.000250100] [21034608 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInCreate)
+[00:00:05.567624200 / 00:00:00.005589600] [21073856 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInCreate)
+[00:00:05.571544800 / 00:00:00.003920600] [21073856 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInCreate)
+[00:00:05.573154200 / 00:00:00.001609400] [21073856 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInCreateWithInactiveStatus)
+[00:00:05.575992900 / 00:00:00.002838700] [21073856 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::setUp)
+[00:00:05.576354600 / 00:00:00.000361700] [21073856 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::setUp
+[00:00:05.576642500 / 00:00:00.000287900] [21034792 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInCreateWithInactiveStatus)
+[00:00:05.579481000 / 00:00:00.002838500] [21054336 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInCreateWithInactiveStatus)
+[00:00:05.580053900 / 00:00:00.000572900] [21054336 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInCreateWithInactiveStatus)
+[00:00:05.580608600 / 00:00:00.000554700] [21054336 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInCreateFailsWhenLevelAndBatchAlreadyExist)
+[00:00:05.582981700 / 00:00:00.002373100] [21054336 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::setUp)
+[00:00:05.583338700 / 00:00:00.000357000] [21054336 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::setUp
+[00:00:05.583561000 / 00:00:00.000222300] [21033568 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInCreateFailsWhenLevelAndBatchAlreadyExist)
+[00:00:05.585650300 / 00:00:00.002089300] [21053176 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInCreateFailsWhenLevelAndBatchAlreadyExist)
+[00:00:05.586093600 / 00:00:00.000443300] [21053176 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInCreateFailsWhenLevelAndBatchAlreadyExist)
+[00:00:05.586604800 / 00:00:00.000511200] [21053176 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInUpdate)
+[00:00:05.588782300 / 00:00:00.002177500] [21053176 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::setUp)
+[00:00:05.589184400 / 00:00:00.000402100] [21053176 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::setUp
+[00:00:05.589511600 / 00:00:00.000327200] [21032376 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInUpdate)
+[00:00:05.595097200 / 00:00:00.005585600] [21053752 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInUpdate)
+[00:00:05.595548200 / 00:00:00.000451000] [21053752 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInUpdate)
+[00:00:05.597475500 / 00:00:00.001927300] [21053752 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInUpdateWithInactiveStatus)
+[00:00:05.603422400 / 00:00:00.005946900] [21053752 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::setUp)
+[00:00:05.603752700 / 00:00:00.000330300] [21053752 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::setUp
+[00:00:05.604071300 / 00:00:00.000318600] [21031072 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInUpdateWithInactiveStatus)
+[00:00:05.609235000 / 00:00:00.005163700] [21052448 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInUpdateWithInactiveStatus)
+[00:00:05.609883200 / 00:00:00.000648200] [21052448 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInUpdateWithInactiveStatus)
+[00:00:05.610749200 / 00:00:00.000866000] [21052448 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInUpdateFailsWhenLevelAndBatchBelongToAnotherPeriod)
+[00:00:05.618663300 / 00:00:00.007914100] [21052448 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::setUp)
+[00:00:05.619126900 / 00:00:00.000463600] [21052448 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::setUp
+[00:00:05.619694900 / 00:00:00.000568000] [21029848 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInUpdateFailsWhenLevelAndBatchBelongToAnotherPeriod)
+[00:00:05.623402800 / 00:00:00.003707900] [21050704 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInUpdateFailsWhenLevelAndBatchBelongToAnotherPeriod)
+[00:00:05.623985500 / 00:00:00.000582700] [21050704 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInUpdateFailsWhenLevelAndBatchBelongToAnotherPeriod)
+[00:00:05.624766200 / 00:00:00.000780700] [21050704 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInUpdateFailsWhenIdDoesNotExist)
+[00:00:05.627790400 / 00:00:00.003024200] [21050704 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::setUp)
+[00:00:05.631434800 / 00:00:00.003644400] [21050704 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::setUp
+[00:00:05.634664000 / 00:00:00.003229200] [21028656 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInUpdateFailsWhenIdDoesNotExist)
+[00:00:05.635977400 / 00:00:00.001313400] [21046432 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInUpdateFailsWhenIdDoesNotExist)
+[00:00:05.636649900 / 00:00:00.000672500] [21046432 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveInUpdateFailsWhenIdDoesNotExist)
+[00:00:05.639408600 / 00:00:00.002758700] [21046432 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveFailsWhenLocationIsEmpty)
+[00:00:05.641369300 / 00:00:00.001960700] [21046432 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::setUp)
+[00:00:05.641815500 / 00:00:00.000446200] [21046432 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::setUp
+[00:00:05.642259800 / 00:00:00.000444300] [21027496 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveFailsWhenLocationIsEmpty)
+[00:00:05.642790900 / 00:00:00.000531100] [21035400 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveFailsWhenLocationIsEmpty)
+[00:00:05.643326300 / 00:00:00.000535400] [21035400 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveFailsWhenLocationIsEmpty)
+[00:00:05.644259900 / 00:00:00.000933600] [21035400 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveFailsWhenLevelIsEmpty)
+[00:00:05.645594600 / 00:00:00.001334700] [21039680 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::setUp)
+[00:00:05.645949000 / 00:00:00.000354400] [21039680 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::setUp
+[00:00:05.646254200 / 00:00:00.000305200] [21026240 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveFailsWhenLevelIsEmpty)
+[00:00:05.646639300 / 00:00:00.000385100] [21034144 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveFailsWhenLevelIsEmpty)
+[00:00:05.647001300 / 00:00:00.000362000] [21034144 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveFailsWhenLevelIsEmpty)
+[00:00:05.647372900 / 00:00:00.000371600] [21034144 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveFailsWhenBatchIsNull)
+[00:00:05.648539500 / 00:00:00.001166600] [21038424 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::setUp)
+[00:00:05.648984100 / 00:00:00.000444600] [21038424 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::setUp
+[00:00:05.649331000 / 00:00:00.000346900] [21024984 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveFailsWhenBatchIsNull)
+[00:00:05.649834100 / 00:00:00.000503100] [21032888 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveFailsWhenBatchIsNull)
+[00:00:05.650457400 / 00:00:00.000623300] [21032888 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveFailsWhenBatchIsNull)
+[00:00:05.650969500 / 00:00:00.000512100] [21032888 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveFailsWhenBatchIsZero)
+[00:00:05.652635800 / 00:00:00.001666300] [21037168 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::setUp)
+[00:00:05.653075100 / 00:00:00.000439300] [21037168 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::setUp
+[00:00:05.653569500 / 00:00:00.000494400] [21023728 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveFailsWhenBatchIsZero)
+[00:00:05.654127600 / 00:00:00.000558100] [21031632 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveFailsWhenBatchIsZero)
+[00:00:05.654718000 / 00:00:00.000590400] [21031632 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveFailsWhenBatchIsZero)
+[00:00:05.655647100 / 00:00:00.000929100] [21031632 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveFailsWhenBatchIsNegative)
+[00:00:05.657349700 / 00:00:00.001702600] [21035912 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::setUp)
+[00:00:05.657781200 / 00:00:00.000431500] [21035912 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::setUp
+[00:00:05.658165900 / 00:00:00.000384700] [21022472 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveFailsWhenBatchIsNegative)
+[00:00:05.658649100 / 00:00:00.000483200] [21030376 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveFailsWhenBatchIsNegative)
+[00:00:05.659202700 / 00:00:00.000553600] [21030376 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveFailsWhenBatchIsNegative)
+[00:00:05.659766700 / 00:00:00.000564000] [21030376 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveFailsWhenIsActiveIsNull)
+[00:00:05.661115300 / 00:00:00.001348600] [21034656 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::setUp)
+[00:00:05.661573000 / 00:00:00.000457700] [21034656 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::setUp
+[00:00:05.661960400 / 00:00:00.000387400] [21021216 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveFailsWhenIsActiveIsNull)
+[00:00:05.662443700 / 00:00:00.000483300] [21029120 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveFailsWhenIsActiveIsNull)
+[00:00:05.663041300 / 00:00:00.000597600] [21029120 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest::testSaveFailsWhenIsActiveIsNull)
+[00:00:05.663843900 / 00:00:00.000802600] [21029120 bytes] Test Suite Finished (Danish\IkspiTubanRegistration\Service\RegistrationPeriodServiceTest, 13 tests)
+[00:00:05.664447200 / 00:00:00.000603300] [21029120 bytes] Test Suite Started (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest, 7 tests)
+[00:00:05.665570700 / 00:00:00.001123500] [21052448 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testCreateRegistrationSuccess)
+[00:00:05.669988400 / 00:00:00.004417700] [21140200 bytes] Mock Object Created (Danish\IkspiTubanRegistration\Repository\RegistrationRepository)
+[00:00:05.670751100 / 00:00:00.000762700] [21183000 bytes] Mock Object Created (Danish\IkspiTubanRegistration\Service\UploadRegistrationPhotoService)
+[00:00:05.671327500 / 00:00:00.000576400] [21183000 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::setUp)
+[00:00:05.671608900 / 00:00:00.000281400] [21183000 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::setUp
+[00:00:05.671865900 / 00:00:00.000257000] [21139456 bytes] Test Prepared (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testCreateRegistrationSuccess)
+[00:00:05.674937700 / 00:00:00.003071800] [21179952 bytes] After Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::tearDown)
+[00:00:05.675510200 / 00:00:00.000572500] [21179952 bytes] After Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::tearDown
+[00:00:05.676608800 / 00:00:00.001098600] [21179952 bytes] Test Passed (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testCreateRegistrationSuccess)
+[00:00:05.677260300 / 00:00:00.000651500] [21179952 bytes] Test Finished (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testCreateRegistrationSuccess)
+[00:00:05.678101300 / 00:00:00.000841000] [21179952 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testCreateRegistrationCleansSmallPhotoWhenLargePhotoFails)
+[00:00:05.679049300 / 00:00:00.000948000] [21179952 bytes] Mock Object Created (Danish\IkspiTubanRegistration\Repository\RegistrationRepository)
+[00:00:05.679544100 / 00:00:00.000494800] [21179952 bytes] Mock Object Created (Danish\IkspiTubanRegistration\Service\UploadRegistrationPhotoService)
+[00:00:05.679873800 / 00:00:00.000329700] [21179952 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::setUp)
+[00:00:05.680068500 / 00:00:00.000194700] [21179952 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::setUp
+[00:00:05.680328700 / 00:00:00.000260200] [21140104 bytes] Test Prepared (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testCreateRegistrationCleansSmallPhotoWhenLargePhotoFails)
+[00:00:05.683786900 / 00:00:00.003458200] [21160272 bytes] After Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::tearDown)
+[00:00:05.684235300 / 00:00:00.000448400] [21160272 bytes] After Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::tearDown
+[00:00:05.684474500 / 00:00:00.000239200] [21160272 bytes] Test Passed (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testCreateRegistrationCleansSmallPhotoWhenLargePhotoFails)
+[00:00:05.684801900 / 00:00:00.000327400] [21160272 bytes] Test Finished (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testCreateRegistrationCleansSmallPhotoWhenLargePhotoFails)
+[00:00:05.687239100 / 00:00:00.002437200] [21160272 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testCreateRegistrationCleansPhotosWhenRepositoryFails)
+[00:00:05.689895800 / 00:00:00.002656700] [21160272 bytes] Mock Object Created (Danish\IkspiTubanRegistration\Repository\RegistrationRepository)
+[00:00:05.690293800 / 00:00:00.000398000] [21160272 bytes] Mock Object Created (Danish\IkspiTubanRegistration\Service\UploadRegistrationPhotoService)
+[00:00:05.690894000 / 00:00:00.000600200] [21160272 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::setUp)
+[00:00:05.691205200 / 00:00:00.000311200] [21160272 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::setUp
+[00:00:05.691527700 / 00:00:00.000322500] [21138944 bytes] Test Prepared (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testCreateRegistrationCleansPhotosWhenRepositoryFails)
+[00:00:05.697616500 / 00:00:00.006088800] [21166856 bytes] Test Triggered PHPUnit Notice (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testCreateRegistrationCleansPhotosWhenRepositoryFails)
+                                                           No expectations were configured for the mock object for Danish\IkspiTubanRegistration\Service\UploadRegistrationPhotoService. Consider refactoring your test code to use a test stub instead. The #[AllowMockObjectsWithoutExpectations] attribute can be used to opt out of this check.
+[00:00:05.698639900 / 00:00:00.001023400] [21166856 bytes] After Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::tearDown)
+[00:00:05.698933600 / 00:00:00.000293700] [21166856 bytes] After Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::tearDown
+[00:00:05.699207800 / 00:00:00.000274200] [21166856 bytes] Test Passed (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testCreateRegistrationCleansPhotosWhenRepositoryFails)
+[00:00:05.699635800 / 00:00:00.000428000] [21166856 bytes] Test Finished (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testCreateRegistrationCleansPhotosWhenRepositoryFails)
+[00:00:05.700200300 / 00:00:00.000564500] [21166856 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testUpdateRegistrationNotFoundThrowsException)
+[00:00:05.701835000 / 00:00:00.001634700] [21166856 bytes] Mock Object Created (Danish\IkspiTubanRegistration\Repository\RegistrationRepository)
+[00:00:05.702346000 / 00:00:00.000511000] [21166856 bytes] Mock Object Created (Danish\IkspiTubanRegistration\Service\UploadRegistrationPhotoService)
+[00:00:05.703131000 / 00:00:00.000785000] [21166856 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::setUp)
+[00:00:05.703463200 / 00:00:00.000332200] [21166856 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::setUp
+[00:00:05.703746500 / 00:00:00.000283300] [21146888 bytes] Test Prepared (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testUpdateRegistrationNotFoundThrowsException)
+[00:00:05.704626100 / 00:00:00.000879600] [21159976 bytes] After Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::tearDown)
+[00:00:05.704992600 / 00:00:00.000366500] [21159976 bytes] After Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::tearDown
+[00:00:05.705330800 / 00:00:00.000338200] [21159976 bytes] Test Passed (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testUpdateRegistrationNotFoundThrowsException)
+[00:00:05.705820500 / 00:00:00.000489700] [21159976 bytes] Test Finished (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testUpdateRegistrationNotFoundThrowsException)
+[00:00:05.706891400 / 00:00:00.001070900] [21159976 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testUpdateRegistrationSuccessDeletesOldPhotos)
+[00:00:05.708022600 / 00:00:00.001131200] [21159976 bytes] Mock Object Created (Danish\IkspiTubanRegistration\Repository\RegistrationRepository)
+[00:00:05.708304200 / 00:00:00.000281600] [21159976 bytes] Mock Object Created (Danish\IkspiTubanRegistration\Service\UploadRegistrationPhotoService)
+[00:00:05.708639400 / 00:00:00.000335200] [21159976 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::setUp)
+[00:00:05.708918200 / 00:00:00.000278800] [21159976 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::setUp
+[00:00:05.709181200 / 00:00:00.000263000] [21145728 bytes] Test Prepared (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testUpdateRegistrationSuccessDeletesOldPhotos)
+[00:00:05.716637100 / 00:00:00.007455900] [21167776 bytes] Test Triggered PHPUnit Notice (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testUpdateRegistrationSuccessDeletesOldPhotos)
+                                                           No expectations were configured for the mock object for Danish\IkspiTubanRegistration\Service\UploadRegistrationPhotoService. Consider refactoring your test code to use a test stub instead. The #[AllowMockObjectsWithoutExpectations] attribute can be used to opt out of this check.
+[00:00:05.718088900 / 00:00:00.001451800] [21167776 bytes] After Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::tearDown)
+[00:00:05.718682800 / 00:00:00.000593900] [21167776 bytes] After Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::tearDown
+[00:00:05.718901700 / 00:00:00.000218900] [21167776 bytes] Test Passed (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testUpdateRegistrationSuccessDeletesOldPhotos)
+[00:00:05.719185700 / 00:00:00.000284000] [21167776 bytes] Test Finished (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testUpdateRegistrationSuccessDeletesOldPhotos)
+[00:00:05.719662600 / 00:00:00.000476900] [21167776 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testUpdateRegistrationFailurePreservesOldPhotos)
+[00:00:05.721083300 / 00:00:00.001420700] [21167776 bytes] Mock Object Created (Danish\IkspiTubanRegistration\Repository\RegistrationRepository)
+[00:00:05.721559100 / 00:00:00.000475800] [21167776 bytes] Mock Object Created (Danish\IkspiTubanRegistration\Service\UploadRegistrationPhotoService)
+[00:00:05.722177800 / 00:00:00.000618700] [21167776 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::setUp)
+[00:00:05.722574300 / 00:00:00.000396500] [21167776 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::setUp
+[00:00:05.722903100 / 00:00:00.000328800] [21153240 bytes] Test Prepared (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testUpdateRegistrationFailurePreservesOldPhotos)
+[00:00:05.732825200 / 00:00:00.009922100] [21175288 bytes] Test Triggered PHPUnit Notice (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testUpdateRegistrationFailurePreservesOldPhotos)
+                                                           No expectations were configured for the mock object for Danish\IkspiTubanRegistration\Service\UploadRegistrationPhotoService. Consider refactoring your test code to use a test stub instead. The #[AllowMockObjectsWithoutExpectations] attribute can be used to opt out of this check.
+[00:00:05.734514600 / 00:00:00.001689400] [21175288 bytes] After Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::tearDown)
+[00:00:05.735133400 / 00:00:00.000618800] [21175288 bytes] After Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::tearDown
+[00:00:05.735413400 / 00:00:00.000280000] [21175288 bytes] Test Passed (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testUpdateRegistrationFailurePreservesOldPhotos)
+[00:00:05.735855000 / 00:00:00.000441600] [21175288 bytes] Test Finished (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testUpdateRegistrationFailurePreservesOldPhotos)
+[00:00:05.736412000 / 00:00:00.000557000] [21175288 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testCreateRegistrationWithEmptyNameThrowsException)
+[00:00:05.737603500 / 00:00:00.001191500] [21175288 bytes] Mock Object Created (Danish\IkspiTubanRegistration\Repository\RegistrationRepository)
+[00:00:05.738007300 / 00:00:00.000403800] [21175288 bytes] Mock Object Created (Danish\IkspiTubanRegistration\Service\UploadRegistrationPhotoService)
+[00:00:05.738588000 / 00:00:00.000580700] [21175288 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::setUp)
+[00:00:05.738971100 / 00:00:00.000383100] [21175288 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::setUp
+[00:00:05.739294700 / 00:00:00.000323600] [21160752 bytes] Test Prepared (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testCreateRegistrationWithEmptyNameThrowsException)
+[00:00:05.740133200 / 00:00:00.000838500] [21171312 bytes] After Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::tearDown)
+[00:00:05.740695500 / 00:00:00.000562300] [21171312 bytes] After Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::tearDown
+[00:00:05.741065700 / 00:00:00.000370200] [21171312 bytes] Test Passed (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testCreateRegistrationWithEmptyNameThrowsException)
+[00:00:05.741607200 / 00:00:00.000541500] [21171312 bytes] Test Finished (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest::testCreateRegistrationWithEmptyNameThrowsException)
+[00:00:05.742429100 / 00:00:00.000821900] [21171312 bytes] Test Suite Finished (Danish\IkspiTubanRegistration\Tests\Service\RegistrationServiceTest, 7 tests)
+[00:00:05.742887800 / 00:00:00.000458700] [21171312 bytes] Test Suite Started (Danish\IkspiTubanRegistration\Service\SessionServiceTest, 3 tests)
+[00:00:05.743770600 / 00:00:00.000882800] [21192384 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\SessionServiceTest::testCreate)
+[00:00:05.746457000 / 00:00:00.002686400] [21192384 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\SessionServiceTest::setUp)
+[00:00:05.746736600 / 00:00:00.000279600] [21192384 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\SessionServiceTest::setUp
+[00:00:05.747003200 / 00:00:00.000266600] [21158416 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\SessionServiceTest::testCreate)
+[00:00:05.749516300 / 00:00:00.002513100] [21159776 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\SessionServiceTest::testCreate)
+[00:00:05.749972400 / 00:00:00.000456100] [21159856 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\SessionServiceTest::testCreate)
+[00:00:05.750467600 / 00:00:00.000495200] [21159856 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\SessionServiceTest::testGetCurrentUser)
+[00:00:05.753023200 / 00:00:00.002555600] [21170424 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\SessionServiceTest::setUp)
+[00:00:05.753380000 / 00:00:00.000356800] [21170424 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\SessionServiceTest::setUp
+[00:00:05.753672300 / 00:00:00.000292300] [21157064 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\SessionServiceTest::testGetCurrentUser)
+[00:00:05.757121000 / 00:00:00.003448700] [21174760 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\SessionServiceTest::testGetCurrentUser)
+[00:00:05.757815200 / 00:00:00.000694200] [21174760 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\SessionServiceTest::testGetCurrentUser)
+[00:00:05.759287100 / 00:00:00.001471900] [21174760 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\SessionServiceTest::testDestroy)
+[00:00:05.761945900 / 00:00:00.002658800] [21174760 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\SessionServiceTest::setUp)
+[00:00:05.762319800 / 00:00:00.000373900] [21174760 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\SessionServiceTest::setUp
+[00:00:05.762640500 / 00:00:00.000320700] [21155856 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\SessionServiceTest::testDestroy)
+[00:00:05.768481200 / 00:00:00.005840700] [21172792 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\SessionServiceTest::testDestroy)
+[00:00:05.769190700 / 00:00:00.000709500] [21172792 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\SessionServiceTest::testDestroy)
+[00:00:05.769794800 / 00:00:00.000604100] [21172792 bytes] Test Suite Finished (Danish\IkspiTubanRegistration\Service\SessionServiceTest, 3 tests)
+[00:00:05.770359300 / 00:00:00.000564500] [21172792 bytes] Test Suite Started (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest, 9 tests)
+[00:00:05.771527900 / 00:00:00.001168600] [21190336 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveSmallPhotoSuccess)
+[00:00:05.772028300 / 00:00:00.000500400] [21190336 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::setUp)
+[00:00:05.772392900 / 00:00:00.000364600] [21190336 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::setUp
+[00:00:05.772779000 / 00:00:00.000386100] [21155704 bytes] Test Prepared (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveSmallPhotoSuccess)
+[00:00:05.794668400 / 00:00:00.021889400] [29555168 bytes] After Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::tearDown)
+[00:00:05.795210100 / 00:00:00.000541700] [29555168 bytes] After Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::tearDown
+[00:00:05.795491900 / 00:00:00.000281800] [29555168 bytes] Test Passed (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveSmallPhotoSuccess)
+[00:00:05.795995200 / 00:00:00.000503300] [29555168 bytes] Test Finished (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveSmallPhotoSuccess)
+[00:00:05.796614100 / 00:00:00.000618900] [29555168 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveLargePhotoSuccess)
+[00:00:05.797020200 / 00:00:00.000406100] [29555168 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::setUp)
+[00:00:05.797242300 / 00:00:00.000222100] [29555168 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::setUp
+[00:00:05.797527500 / 00:00:00.000285200] [21154544 bytes] Test Prepared (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveLargePhotoSuccess)
+[00:00:05.852996200 / 00:00:00.055468700] [29566936 bytes] After Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::tearDown)
+[00:00:05.853451300 / 00:00:00.000455100] [29566936 bytes] After Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::tearDown
+[00:00:05.853696600 / 00:00:00.000245300] [29566936 bytes] Test Passed (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveLargePhotoSuccess)
+[00:00:05.854024800 / 00:00:00.000328200] [29566936 bytes] Test Finished (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveLargePhotoSuccess)
+[00:00:05.854461600 / 00:00:00.000436800] [29566936 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveWithoutFileThrowsException)
+[00:00:05.854785400 / 00:00:00.000323800] [29566936 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::setUp)
+[00:00:05.855032600 / 00:00:00.000247200] [29566936 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::setUp
+[00:00:05.855236800 / 00:00:00.000204200] [21153416 bytes] Test Prepared (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveWithoutFileThrowsException)
+[00:00:05.856172000 / 00:00:00.000935200] [21193328 bytes] After Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::tearDown)
+[00:00:05.856434800 / 00:00:00.000262800] [21193328 bytes] After Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::tearDown
+[00:00:05.856693200 / 00:00:00.000258400] [21193328 bytes] Test Passed (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveWithoutFileThrowsException)
+[00:00:05.857175800 / 00:00:00.000482600] [21193328 bytes] Test Finished (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveWithoutFileThrowsException)
+[00:00:05.857712400 / 00:00:00.000536600] [21193328 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveSmallPhotoExceedingMaximumSizeThrowsException)
+[00:00:05.858117800 / 00:00:00.000405400] [21193328 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::setUp)
+[00:00:05.858403000 / 00:00:00.000285200] [21193328 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::setUp
+[00:00:05.858758200 / 00:00:00.000355200] [21153856 bytes] Test Prepared (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveSmallPhotoExceedingMaximumSizeThrowsException)
+[00:00:05.863607600 / 00:00:00.004849400] [21166000 bytes] After Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::tearDown)
+[00:00:05.864082300 / 00:00:00.000474700] [21166000 bytes] After Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::tearDown
+[00:00:05.864368400 / 00:00:00.000286100] [21166000 bytes] Test Passed (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveSmallPhotoExceedingMaximumSizeThrowsException)
+[00:00:05.864829300 / 00:00:00.000460900] [21166000 bytes] Test Finished (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveSmallPhotoExceedingMaximumSizeThrowsException)
+[00:00:05.865405400 / 00:00:00.000576100] [21166000 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveLargePhotoExceedingMaximumSizeThrowsException)
+[00:00:05.865963500 / 00:00:00.000558100] [21166000 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::setUp)
+[00:00:05.866302000 / 00:00:00.000338500] [21166000 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::setUp
+[00:00:05.866598900 / 00:00:00.000296900] [21152696 bytes] Test Prepared (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveLargePhotoExceedingMaximumSizeThrowsException)
+[00:00:05.876159000 / 00:00:00.009560100] [21164840 bytes] After Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::tearDown)
+[00:00:05.877213500 / 00:00:00.001054500] [21164840 bytes] After Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::tearDown
+[00:00:05.878221300 / 00:00:00.001007800] [21164840 bytes] Test Passed (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveLargePhotoExceedingMaximumSizeThrowsException)
+[00:00:05.878757200 / 00:00:00.000535900] [21164840 bytes] Test Finished (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveLargePhotoExceedingMaximumSizeThrowsException)
+[00:00:05.879413500 / 00:00:00.000656300] [21164840 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveInvalidMimeTypeThrowsException)
+[00:00:05.879936900 / 00:00:00.000523400] [21164840 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::setUp)
+[00:00:05.880230700 / 00:00:00.000293800] [21164840 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::setUp
+[00:00:05.880453200 / 00:00:00.000222500] [21151536 bytes] Test Prepared (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveInvalidMimeTypeThrowsException)
+[00:00:05.896117200 / 00:00:00.015664000] [29549896 bytes] After Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::tearDown)
+[00:00:05.896761500 / 00:00:00.000644300] [29549896 bytes] After Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::tearDown
+[00:00:05.897021500 / 00:00:00.000260000] [29549896 bytes] Test Passed (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveInvalidMimeTypeThrowsException)
+[00:00:05.897424800 / 00:00:00.000403300] [29549896 bytes] Test Finished (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveInvalidMimeTypeThrowsException)
+[00:00:05.897899800 / 00:00:00.000475000] [29549896 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveLargePhotoWithWrongRatioThrowsException)
+[00:00:05.898253700 / 00:00:00.000353900] [29549896 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::setUp)
+[00:00:05.898506400 / 00:00:00.000252700] [29549896 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::setUp
+[00:00:05.898766500 / 00:00:00.000260100] [21150376 bytes] Test Prepared (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveLargePhotoWithWrongRatioThrowsException)
+[00:00:05.913260600 / 00:00:00.014494100] [29549840 bytes] After Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::tearDown)
+[00:00:05.913911600 / 00:00:00.000651000] [29549840 bytes] After Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::tearDown
+[00:00:05.914195100 / 00:00:00.000283500] [29549840 bytes] Test Passed (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveLargePhotoWithWrongRatioThrowsException)
+[00:00:05.914652800 / 00:00:00.000457700] [29549840 bytes] Test Finished (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveLargePhotoWithWrongRatioThrowsException)
+[00:00:05.915082500 / 00:00:00.000429700] [29549840 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveSmallPhotoWithWrongRatioThrowsException)
+[00:00:05.915474300 / 00:00:00.000391800] [29549840 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::setUp)
+[00:00:05.915805800 / 00:00:00.000331500] [29549840 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::setUp
+[00:00:05.916104900 / 00:00:00.000299100] [21149216 bytes] Test Prepared (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveSmallPhotoWithWrongRatioThrowsException)
+[00:00:05.975084300 / 00:00:00.058979400] [29561608 bytes] After Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::tearDown)
+[00:00:05.975823500 / 00:00:00.000739200] [29561608 bytes] After Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::tearDown
+[00:00:05.976123500 / 00:00:00.000300000] [29561608 bytes] Test Passed (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveSmallPhotoWithWrongRatioThrowsException)
+[00:00:05.976576500 / 00:00:00.000453000] [29561608 bytes] Test Finished (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveSmallPhotoWithWrongRatioThrowsException)
+[00:00:05.978321800 / 00:00:00.001745300] [29561608 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveWithInvalidPhotoTypeThrowsException)
+[00:00:05.978797900 / 00:00:00.000476100] [29561608 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::setUp)
+[00:00:05.979121700 / 00:00:00.000323800] [29561608 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::setUp
+[00:00:05.979550500 / 00:00:00.000428800] [21148056 bytes] Test Prepared (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveWithInvalidPhotoTypeThrowsException)
+[00:00:05.994471200 / 00:00:00.014920700] [21864760 bytes] After Test Method Called (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::tearDown)
+[00:00:05.995964200 / 00:00:00.001493000] [21864760 bytes] After Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::tearDown
+[00:00:05.996400800 / 00:00:00.000436600] [21864760 bytes] Test Passed (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveWithInvalidPhotoTypeThrowsException)
+[00:00:05.996985800 / 00:00:00.000585000] [21864760 bytes] Test Finished (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest::testSaveWithInvalidPhotoTypeThrowsException)
+[00:00:05.997539400 / 00:00:00.000553600] [21864760 bytes] Test Suite Finished (Danish\IkspiTubanRegistration\Tests\Service\UploadRegistrationPhotoServiceTest, 9 tests)
+[00:00:05.997950400 / 00:00:00.000411000] [21864760 bytes] Test Suite Started (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest, 11 tests)
+[00:00:05.998519100 / 00:00:00.000568700] [21864760 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testUserChangePassword)
+[00:00:06.001452100 / 00:00:00.002933000] [21864760 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::setUp)
+[00:00:06.001741900 / 00:00:00.000289800] [21864760 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::setUp
+[00:00:06.002028200 / 00:00:00.000286300] [21164352 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testUserChangePassword)
+[00:00:07.664298000 / 00:00:01.662269800] [21205224 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testUserChangePassword)
+[00:00:07.665106200 / 00:00:00.000808200] [21205224 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testUserChangePassword)
+[00:00:07.665687500 / 00:00:00.000581300] [21205224 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testUserChangePasswordValidationExceptionConfirmPasswordWrong)
+[00:00:07.668667500 / 00:00:00.002980000] [21205224 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::setUp)
+[00:00:07.668928300 / 00:00:00.000260800] [21205224 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::setUp
+[00:00:07.669195900 / 00:00:00.000267600] [21165960 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testUserChangePasswordValidationExceptionConfirmPasswordWrong)
+[00:00:08.645092000 / 00:00:00.975896100] [21184120 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testUserChangePasswordValidationExceptionConfirmPasswordWrong)
+[00:00:08.645523900 / 00:00:00.000431900] [21184120 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testUserChangePasswordValidationExceptionConfirmPasswordWrong)
+[00:00:08.645958300 / 00:00:00.000434400] [21184120 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testLoginSuccess)
+[00:00:08.648238100 / 00:00:00.002279800] [21184120 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::setUp)
+[00:00:08.648477300 / 00:00:00.000239200] [21184120 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::setUp
+[00:00:08.648736900 / 00:00:00.000259600] [21164736 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testLoginSuccess)
+[00:00:09.540756700 / 00:00:00.892019800] [21182336 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testLoginSuccess)
+[00:00:09.541222600 / 00:00:00.000465900] [21182336 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testLoginSuccess)
+[00:00:09.541601900 / 00:00:00.000379300] [21182336 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testLogout)
+[00:00:09.543401700 / 00:00:00.001799800] [21182336 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::setUp)
+[00:00:09.543608600 / 00:00:00.000206900] [21182336 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::setUp
+[00:00:09.543832700 / 00:00:00.000224100] [21163432 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testLogout)
+[00:00:10.106450500 / 00:00:00.562617800] [21181032 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testLogout)
+[00:00:10.106809300 / 00:00:00.000358800] [21181032 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testLogout)
+[00:00:10.107128000 / 00:00:00.000318700] [21181032 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testLoginFailedWrongPassword)
+[00:00:10.108841700 / 00:00:00.001713700] [21181032 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::setUp)
+[00:00:10.109048600 / 00:00:00.000206900] [21181032 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::setUp
+[00:00:10.109306200 / 00:00:00.000257600] [21162016 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testLoginFailedWrongPassword)
+[00:00:10.744830300 / 00:00:00.635524100] [21179504 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testLoginFailedWrongPassword)
+[00:00:10.745266000 / 00:00:00.000435700] [21179504 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testLoginFailedWrongPassword)
+[00:00:10.746237900 / 00:00:00.000971900] [21179504 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testLoginFailedWrongEmail)
+[00:00:10.748474900 / 00:00:00.002237000] [21179504 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::setUp)
+[00:00:10.748700500 / 00:00:00.000225600] [21179504 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::setUp
+[00:00:10.748905400 / 00:00:00.000204900] [21160712 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testLoginFailedWrongEmail)
+[00:00:11.033091700 / 00:00:00.284186300] [21177672 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testLoginFailedWrongEmail)
+[00:00:11.033426800 / 00:00:00.000335100] [21177672 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testLoginFailedWrongEmail)
+[00:00:11.033750800 / 00:00:00.000324000] [21177672 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testLoginFailedEmptyEmaill)
+[00:00:11.035551500 / 00:00:00.001800700] [21177672 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::setUp)
+[00:00:11.035754700 / 00:00:00.000203200] [21177672 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::setUp
+[00:00:11.035904400 / 00:00:00.000149700] [21159408 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testLoginFailedEmptyEmaill)
+[00:00:11.313316300 / 00:00:00.277411900] [21176288 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testLoginFailedEmptyEmaill)
+[00:00:11.313735200 / 00:00:00.000418900] [21176288 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testLoginFailedEmptyEmaill)
+[00:00:11.314082800 / 00:00:00.000347600] [21176288 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testLoginFailedEmptyPassword)
+[00:00:11.316161000 / 00:00:00.002078200] [21176288 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::setUp)
+[00:00:11.316371500 / 00:00:00.000210500] [21176288 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::setUp
+[00:00:11.316542200 / 00:00:00.000170700] [21158104 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testLoginFailedEmptyPassword)
+[00:00:11.603360800 / 00:00:00.286818600] [21174984 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testLoginFailedEmptyPassword)
+[00:00:11.603782300 / 00:00:00.000421500] [21174984 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testLoginFailedEmptyPassword)
+[00:00:11.604194700 / 00:00:00.000412400] [21174984 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testRegisterSeccess)
+[00:00:11.606109600 / 00:00:00.001914900] [21174984 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::setUp)
+[00:00:11.606331100 / 00:00:00.000221500] [21174984 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::setUp
+[00:00:11.606558500 / 00:00:00.000227400] [21156768 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testRegisterSeccess)
+[00:00:12.148504700 / 00:00:00.541946200] [21173592 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testRegisterSeccess)
+[00:00:12.148912300 / 00:00:00.000407600] [21173592 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testRegisterSeccess)
+[00:00:12.149463800 / 00:00:00.000551500] [21173592 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testRegisterFailedBlankEmail)
+[00:00:12.153881600 / 00:00:00.004417800] [21173592 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::setUp)
+[00:00:12.154100700 / 00:00:00.000219100] [21173592 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::setUp
+[00:00:12.154269200 / 00:00:00.000168500] [21155496 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testRegisterFailedBlankEmail)
+[00:00:12.154473000 / 00:00:00.000203800] [21163848 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testRegisterFailedBlankEmail)
+[00:00:12.154672800 / 00:00:00.000199800] [21163848 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testRegisterFailedBlankEmail)
+[00:00:12.154998300 / 00:00:00.000325500] [21163848 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testRegisterFailedBlankPassword)
+[00:00:12.155998800 / 00:00:00.001000500] [21167472 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::setUp)
+[00:00:12.156250700 / 00:00:00.000251900] [21167472 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::setUp
+[00:00:12.156493400 / 00:00:00.000242700] [21154192 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testRegisterFailedBlankPassword)
+[00:00:12.156781100 / 00:00:00.000287700] [21162544 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testRegisterFailedBlankPassword)
+[00:00:12.157021200 / 00:00:00.000240100] [21162544 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest::testRegisterFailedBlankPassword)
+[00:00:12.157280300 / 00:00:00.000259100] [21162544 bytes] Test Suite Finished (Danish\IkspiTubanRegistration\Service\UserAuthServiceTest, 11 tests)
+[00:00:12.157566600 / 00:00:00.000286300] [21162544 bytes] Test Suite Started (Danish\IkspiTubanRegistration\Service\UserServiceTest, 4 tests)
+[00:00:12.158220500 / 00:00:00.000653900] [21184936 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\UserServiceTest::testGetAll)
+[00:00:12.159860400 / 00:00:00.001639900] [21184936 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\UserServiceTest::setUp)
+[00:00:12.162691800 / 00:00:00.002831400] [21184936 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\UserServiceTest::setUp
+[00:00:12.163044500 / 00:00:00.000352700] [21150760 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\UserServiceTest::testGetAll)
+[00:00:12.168062300 / 00:00:00.005017800] [21168528 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\UserServiceTest::testGetAll)
+[00:00:12.169159300 / 00:00:00.001097000] [21168528 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\UserServiceTest::testGetAll)
+[00:00:12.169916400 / 00:00:00.000757100] [21168528 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\UserServiceTest::testDeleteByIdSuccess)
+[00:00:12.172884900 / 00:00:00.002968500] [21168528 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\UserServiceTest::setUp)
+[00:00:12.173266500 / 00:00:00.000381600] [21168528 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\UserServiceTest::setUp
+[00:00:12.173678000 / 00:00:00.000411500] [21149408 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\UserServiceTest::testDeleteByIdSuccess)
+[00:00:12.177318800 / 00:00:00.003640800] [21166736 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\UserServiceTest::testDeleteByIdSuccess)
+[00:00:12.177758400 / 00:00:00.000439600] [21166736 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\UserServiceTest::testDeleteByIdSuccess)
+[00:00:12.178555000 / 00:00:00.000796600] [21166736 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\UserServiceTest::testDeleteByIdFailedUSerNotFound)
+[00:00:12.180606000 / 00:00:00.002051000] [21166736 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\UserServiceTest::setUp)
+[00:00:12.180983000 / 00:00:00.000377000] [21166736 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\UserServiceTest::setUp
+[00:00:12.181425000 / 00:00:00.000442000] [21148136 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\UserServiceTest::testDeleteByIdFailedUSerNotFound)
+[00:00:12.183143100 / 00:00:00.001718100] [21155816 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\UserServiceTest::testDeleteByIdFailedUSerNotFound)
+[00:00:12.185661500 / 00:00:00.002518400] [21155816 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\UserServiceTest::testDeleteByIdFailedUSerNotFound)
+[00:00:12.187804800 / 00:00:00.002143300] [21155816 bytes] Test Preparation Started (Danish\IkspiTubanRegistration\Service\UserServiceTest::testEmptyGetAll)
+[00:00:12.189204900 / 00:00:00.001400100] [21160216 bytes] Before Test Method Called (Danish\IkspiTubanRegistration\Service\UserServiceTest::setUp)
+[00:00:12.189641400 / 00:00:00.000436500] [21160216 bytes] Before Test Method Finished:
+                                                           - Danish\IkspiTubanRegistration\Service\UserServiceTest::setUp
+[00:00:12.189973100 / 00:00:00.000331700] [21146800 bytes] Test Prepared (Danish\IkspiTubanRegistration\Service\UserServiceTest::testEmptyGetAll)
+[00:00:12.190765000 / 00:00:00.000791900] [21162840 bytes] Test Passed (Danish\IkspiTubanRegistration\Service\UserServiceTest::testEmptyGetAll)
+[00:00:12.191294300 / 00:00:00.000529300] [21162840 bytes] Test Finished (Danish\IkspiTubanRegistration\Service\UserServiceTest::testEmptyGetAll)
+[00:00:12.192285100 / 00:00:00.000990800] [21162840 bytes] Test Suite Finished (Danish\IkspiTubanRegistration\Service\UserServiceTest, 4 tests)
+[00:00:12.193645900 / 00:00:00.001360800] [21162840 bytes] Test Suite Finished (CLI Arguments, 112 tests)
+[00:00:12.195773100 / 00:00:00.002127200] [21162840 bytes] Test Runner Execution Finished
+[00:00:12.198732800 / 00:00:00.002959700] [21162840 bytes] Test Runner Finished
+[00:00:12.200596700 / 00:00:00.001863900] [21162840 bytes] PHPUnit Finished (Shell Exit Code: 0)

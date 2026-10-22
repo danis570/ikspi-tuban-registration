@@ -66,6 +66,14 @@
                     <i data-lucide="square-plus" class="w-5 h-5 shrink-0"></i>
                     <span>Registrasi</span>
                 </a>
+
+                 <a href="/registration/all" class="flex items-center gap-3 px-4 py-3 font-black uppercase text-sm border-4 transition-all
+                    <?= ($current ?? '') === 'registrationByUserId'
+                        ? 'bg-primary text-text-invert border-text shadow-brutal'
+                        : 'border-transparent text-text hover:bg-primary hover:text-text-invert hover:border-text' ?>">
+                    <i data-lucide="hard-drive" class="w-5 h-5 shrink-0"></i>
+                    <span>Data Registrasi</span>
+                </a>
             </div>
 
             <!-- SECTION 2: AKUN -->

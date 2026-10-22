@@ -14,7 +14,7 @@
                 <?php
                 // Tentukan URL dan gaya berdasarkan tingkatannya
                 $isLevelI = ($period->level->value === 'I');
-                $url = $isLevelI ? '/registration/i' : '/registration/ii';
+                $url = $isLevelI ? '/registration/level/i' : '/registration/level/ii';
 
                 // Kelas styling neobrutalism
                 $cardClass = $isLevelI
@@ -29,10 +29,10 @@
                 <a href="<?= $url ?>"
                     class="group flex flex-col items-center justify-center p-6 <?= $cardClass ?> border-4 border-text shadow-brutal hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none transition-all duration-150">
                     <?php if ($isLevelI): ?>
-                        <i data-lucide="tally-2"
+                        <i data-lucide="tally-1"
                             class="w-8 h-8 mb-3 <?= $iconClass ?> group-hover:-translate-y-1 transition-transform"></i>
                     <?php else: ?>
-                        <i data-lucide="tally-1"
+                        <i data-lucide="tally-2"
                             class="w-8 h-8 mb-3 <?= $iconClass ?> group-hover:-translate-y-1 transition-transform"></i>
                     <?php endif; ?>
 
