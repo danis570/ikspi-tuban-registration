@@ -3,6 +3,7 @@
 namespace Danish\IkspiTubanRegistration\Repository;
 
 use Danish\IkspiTubanRegistration\Domain\Registration;
+use Danish\IkspiTubanRegistration\Domain\RegistrationDressSize;
 use Danish\IkspiTubanRegistration\Domain\RegistrationPeriod;
 use Danish\IkspiTubanRegistration\Domain\RegistrationPeriodLevel;
 use PDO;
@@ -107,10 +108,11 @@ class RegistrationRepository
                 coach_name,
                 coach_address,
                 small_photo,
-                large_photo
+                large_photo,
+                dress_size
             ) VALUES (
                 ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
-                ?, ?, ?, ?, ?, ?, ?, ?
+                ?, ?, ?, ?, ?, ?, ?, ?, ?
             )
         ";
 
@@ -134,7 +136,8 @@ class RegistrationRepository
             $registration->coachName,
             $registration->coachAddress,
             $registration->smallPhoto,
-            $registration->largePhoto
+            $registration->largePhoto,
+            $registration->dressSize->value
         ]);
 
         $registration->id = (int) $this->connection->lastInsertId();
@@ -168,7 +171,8 @@ class RegistrationRepository
                 coach_name = ?,
                 coach_address = ?,
                 small_photo = ?,
-                large_photo = ?
+                large_photo = ?,
+                dress_size = ?
             WHERE id = ?
         ";
 
@@ -193,6 +197,7 @@ class RegistrationRepository
             $registration->coachAddress,
             $registration->smallPhoto,
             $registration->largePhoto,
+            $registration->dressSize->value,
             $registration->id
         ]);
 
@@ -325,6 +330,8 @@ class RegistrationRepository
 
         $registration->smallPhoto = $row['small_photo'];
         $registration->largePhoto = $row['large_photo'];
+
+        $registration->dressSize = RegistrationDressSize::from($row['dress_size']);
 
         return $registration;
     }

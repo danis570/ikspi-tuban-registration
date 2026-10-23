@@ -5,6 +5,7 @@ namespace Danish\IkspiTubanRegistration\Tests\Service;
 use Danish\IkspiTubanRegistration\App\UploadedFile;
 use Danish\IkspiTubanRegistration\Config\Database;
 use Danish\IkspiTubanRegistration\Domain\Registration;
+use Danish\IkspiTubanRegistration\Domain\RegistrationDressSize;
 use Danish\IkspiTubanRegistration\Exception\ValidationException;
 use Danish\IkspiTubanRegistration\Model\Registration\RegistrationSaveRequest;
 use Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepository;
@@ -31,6 +32,7 @@ class RegistrationServiceTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
+
         $this->registrationRepository = $this->createMock(
             RegistrationRepository::class
         );
@@ -39,7 +41,9 @@ class RegistrationServiceTest extends TestCase
             UploadRegistrationPhotoService::class
         );
 
-        $administration = new AdministrativeAreaRepository(Database::getConnection());
+        $administration = new AdministrativeAreaRepository(
+            Database::getConnection()
+        );
 
         $this->service = new RegistrationService(
             $this->registrationRepository,
@@ -50,15 +54,26 @@ class RegistrationServiceTest extends TestCase
         $this->targetDirectory = dirname(__DIR__, 2)
             . '/public/uploads/registrations/';
 
+        $this->createdFiles = [];
+        $this->directoryCreated = false;
+
         if (!is_dir($this->targetDirectory)) {
-            mkdir($this->targetDirectory, 0777, true);
+            if (
+                !mkdir($this->targetDirectory, 0777, true)
+                && !is_dir($this->targetDirectory)
+            ) {
+                throw new RuntimeException(
+                    'Gagal membuat direktori test.'
+                );
+            }
+
             $this->directoryCreated = true;
         }
     }
 
     protected function tearDown(): void
     {
-        foreach ($this->createdFiles as $fileName) {
+        foreach (array_unique($this->createdFiles) as $fileName) {
             $path = $this->targetDirectory . $fileName;
 
             if (is_file($path)) {
@@ -67,11 +82,13 @@ class RegistrationServiceTest extends TestCase
         }
 
         if (
-            $this->directoryCreated &&
-            is_dir($this->targetDirectory)
+            $this->directoryCreated
+            && is_dir($this->targetDirectory)
         ) {
             rmdir($this->targetDirectory);
         }
+
+        parent::tearDown();
     }
 
     public function testCreateRegistrationSuccess(): void
@@ -83,9 +100,13 @@ class RegistrationServiceTest extends TestCase
             ->method('save')
             ->willReturnCallback(
                 function (UploadedFile $file, string $type): string {
-                    return $type === 'small'
-                        ? 'small-new.png'
-                        : 'large-new.png';
+                    return match ($type) {
+                        'small' => 'small-new.png',
+                        'large' => 'large-new.png',
+                        default => throw new RuntimeException(
+                            'Jenis foto tidak valid.'
+                        ),
+                    };
                 }
             );
 
@@ -99,7 +120,9 @@ class RegistrationServiceTest extends TestCase
                 }
             ))
             ->willReturnCallback(
-                fn(Registration $registration): Registration => $registration
+                fn(
+                Registration $registration
+            ): Registration => $registration
             );
 
         $result = $this->service->save($request);
@@ -120,13 +143,15 @@ class RegistrationServiceTest extends TestCase
             ->method('save')
             ->willReturnCallback(
                 function (UploadedFile $file, string $type): string {
-                    if ($type === 'large') {
-                        throw new RuntimeException(
+                    return match ($type) {
+                        'small' => 'small-new.png',
+                        'large' => throw new RuntimeException(
                             'Gagal menyimpan foto besar.'
-                        );
-                    }
-
-                    return 'small-new.png';
+                        ),
+                        default => throw new RuntimeException(
+                            'Jenis foto tidak valid.'
+                        ),
+                    };
                 }
             );
 
@@ -136,7 +161,10 @@ class RegistrationServiceTest extends TestCase
 
         try {
             $this->service->save($request);
-            $this->fail('RuntimeException seharusnya dilempar.');
+
+            $this->fail(
+                'RuntimeException seharusnya dilempar.'
+            );
         } catch (RuntimeException $exception) {
             $this->assertSame(
                 'Gagal menyimpan foto besar.',
@@ -160,10 +188,15 @@ class RegistrationServiceTest extends TestCase
             ->expects($this->exactly(2))
             ->method('save')
             ->willReturnCallback(
-                fn(UploadedFile $file, string $type): string =>
-                    $type === 'small'
-                    ? 'small-new.png'
-                    : 'large-new.png'
+                function (UploadedFile $file, string $type): string {
+                    return match ($type) {
+                        'small' => 'small-new.png',
+                        'large' => 'large-new.png',
+                        default => throw new RuntimeException(
+                            'Jenis foto tidak valid.'
+                        ),
+                    };
+                }
             );
 
         $this->registrationRepository
@@ -173,20 +206,26 @@ class RegistrationServiceTest extends TestCase
                 new RuntimeException('Database gagal.')
             );
 
-        $this->expectException(RuntimeException::class);
-        $this->expectExceptionMessage('Database gagal.');
-
         try {
             $this->service->save($request);
-        } finally {
-            $this->assertFileDoesNotExist(
-                $this->targetDirectory . 'small-new.png'
-            );
 
-            $this->assertFileDoesNotExist(
-                $this->targetDirectory . 'large-new.png'
+            $this->fail(
+                'RuntimeException seharusnya dilempar.'
+            );
+        } catch (RuntimeException $exception) {
+            $this->assertSame(
+                'Database gagal.',
+                $exception->getMessage()
             );
         }
+
+        $this->assertFileDoesNotExist(
+            $this->targetDirectory . 'small-new.png'
+        );
+
+        $this->assertFileDoesNotExist(
+            $this->targetDirectory . 'large-new.png'
+        );
     }
 
     public function testUpdateRegistrationNotFoundThrowsException(): void
@@ -221,7 +260,6 @@ class RegistrationServiceTest extends TestCase
 
         $this->createPhysicalFile('old-small.png');
         $this->createPhysicalFile('old-large.png');
-
         $this->createPhysicalFile('small-new.png');
         $this->createPhysicalFile('large-new.png');
 
@@ -230,15 +268,21 @@ class RegistrationServiceTest extends TestCase
             ->method('findById')
             ->with(10)
             ->willReturn($current);
-$this->photoService
-    ->expects($this->exactly(2))
-    ->method('save')
-    ->willReturnCallback(
-        fn(UploadedFile $file, string $type): string =>
-            $type === 'small'
-            ? 'small-new.png'
-            : 'large-new.png'
-    );
+
+        $this->photoService
+            ->expects($this->exactly(2))
+            ->method('save')
+            ->willReturnCallback(
+                function (UploadedFile $file, string $type): string {
+                    return match ($type) {
+                        'small' => 'small-new.png',
+                        'large' => 'large-new.png',
+                        default => throw new RuntimeException(
+                            'Jenis foto tidak valid.'
+                        ),
+                    };
+                }
+            );
 
         $this->registrationRepository
             ->expects($this->once())
@@ -277,7 +321,6 @@ $this->photoService
 
         $this->createPhysicalFile('old-small.png');
         $this->createPhysicalFile('old-large.png');
-
         $this->createPhysicalFile('small-new.png');
         $this->createPhysicalFile('large-new.png');
 
@@ -287,15 +330,20 @@ $this->photoService
             ->with(10)
             ->willReturn($current);
 
-       $this->photoService
-    ->expects($this->exactly(2))
-    ->method('save')
-    ->willReturnCallback(
-        fn(UploadedFile $file, string $type): string =>
-            $type === 'small'
-            ? 'small-new.png'
-            : 'large-new.png'
-    );
+        $this->photoService
+            ->expects($this->exactly(2))
+            ->method('save')
+            ->willReturnCallback(
+                function (UploadedFile $file, string $type): string {
+                    return match ($type) {
+                        'small' => 'small-new.png',
+                        'large' => 'large-new.png',
+                        default => throw new RuntimeException(
+                            'Jenis foto tidak valid.'
+                        ),
+                    };
+                }
+            );
 
         $this->registrationRepository
             ->expects($this->once())
@@ -304,7 +352,10 @@ $this->photoService
 
         try {
             $this->service->save($request);
-            $this->fail('RuntimeException seharusnya dilempar.');
+
+            $this->fail(
+                'RuntimeException seharusnya dilempar.'
+            );
         } catch (RuntimeException $exception) {
             $this->assertSame(
                 'Tidak ada data yang diperbarui.',
@@ -377,6 +428,9 @@ $this->photoService
         $request->coachName = 'Nama Pelatih';
         $request->coachAddress = 'Tuban';
 
+        // Property wajib bertipe string.
+        $request->dressSize = 'M';
+
         $request->smallPhoto = $this->createUploadedFile();
         $request->largePhoto = $this->createUploadedFile();
 
@@ -422,6 +476,8 @@ $this->photoService
         $registration->coachName = 'Nama Pelatih';
         $registration->coachAddress = 'Tuban';
 
+        $registration->dressSize = RegistrationDressSize::MEDIUM;
+
         $registration->smallPhoto = 'old-small.png';
         $registration->largePhoto = 'old-large.png';
 
@@ -432,7 +488,11 @@ $this->photoService
     {
         $path = $this->targetDirectory . $fileName;
 
-        file_put_contents($path, 'test file');
+        if (file_put_contents($path, 'test file') === false) {
+            throw new RuntimeException(
+                'Gagal membuat file test: ' . $fileName
+            );
+        }
 
         $this->createdFiles[] = $fileName;
     }

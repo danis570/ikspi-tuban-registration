@@ -33,4 +33,5 @@ class RegistrationSaveRequest
 
     public ?UploadedFile $smallPhoto = null;
     public ?UploadedFile $largePhoto = null;
+    public string $dressSize;
 }

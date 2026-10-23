@@ -31,4 +31,5 @@ class Registration
 
     public ?string $smallPhoto = null;
     public ?string $largePhoto = null;
+    public RegistrationDressSize $dressSize;
 }

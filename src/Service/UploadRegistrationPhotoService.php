@@ -14,22 +14,6 @@ class UploadRegistrationPhotoService
         UploadedFile $file,
         string $photoType
     ): string {
-        $rules = match ($photoType) {
-            self::SMALL_PHOTO => [
-                'max_size' => 1 * 1024 * 1024,
-                'ratio' => 1 / 1,
-                'extension' => 'jpg',
-            ],
-            self::LARGE_PHOTO => [
-                'max_size' => 2 * 1024 * 1024,
-                'ratio' => 7 / 10,
-                'extension' => 'jpg',
-            ],
-            default => throw new UploadFileException(
-                'Jenis foto tidak valid'
-            ),
-        };
-
         if (!$file->hasFile()) {
             throw new UploadFileException(
                 'Foto wajib diunggah'
@@ -42,9 +26,17 @@ class UploadRegistrationPhotoService
             );
         }
 
-        if ($file->size > $rules['max_size']) {
+        $maxSize = match ($photoType) {
+            self::SMALL_PHOTO => 2 * 1024 * 1024,
+            self::LARGE_PHOTO => 3 * 1024 * 1024,
+            default => throw new UploadFileException(
+                'Jenis foto tidak valid'
+            ),
+        };
+
+        if ($file->size > $maxSize) {
             throw new UploadFileException(
-                'Ukuran foto melebihi batas maksimal'
+                'Ukuran foto melebihi batas maksimal, maksimal foto kecil 2mb foto besar 3mb'
             );
         }
 
@@ -66,20 +58,6 @@ class UploadRegistrationPhotoService
         if ($imageInfo === false) {
             throw new UploadFileException(
                 'File bukan gambar yang valid'
-            );
-        }
-
-        [$width, $height] = $imageInfo;
-
-        $actualRatio = $width / $height;
-        $expectedRatio = $rules['ratio'];
-
-        // Toleransi kecil untuk perbedaan pembulatan rasio.
-        if (abs($actualRatio - $expectedRatio) > 0.01) {
-            throw new UploadFileException(
-                $photoType === self::SMALL_PHOTO
-                ? 'Rasio foto kecil harus 1:1 (persegi)'
-                : 'Rasio foto besar harus 7:10 (portrait)'
             );
         }
 

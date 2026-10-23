@@ -4,6 +4,7 @@ namespace Danish\IkspiTubanRegistration\Repository;
 
 use Danish\IkspiTubanRegistration\Config\Database;
 use Danish\IkspiTubanRegistration\Domain\Registration;
+use Danish\IkspiTubanRegistration\Domain\RegistrationDressSize;
 use Danish\IkspiTubanRegistration\Domain\RegistrationPeriod;
 use Danish\IkspiTubanRegistration\Domain\RegistrationPeriodLevel;
 use Danish\IkspiTubanRegistration\Domain\RegistrationPeriodType;
@@ -108,6 +109,8 @@ class RegistrationRepositoryTest extends TestCase
 
         $registration->smallPhoto = null;
         $registration->largePhoto = null;
+
+        $registration->dressSize = RegistrationDressSize::EXTRA_LARGE;
 
         return $registration;
     }

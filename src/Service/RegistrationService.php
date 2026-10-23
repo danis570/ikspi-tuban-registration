@@ -4,6 +4,7 @@ namespace Danish\IkspiTubanRegistration\Service;
 
 use Danish\IkspiTubanRegistration\App\UploadedFile;
 use Danish\IkspiTubanRegistration\Domain\Registration;
+use Danish\IkspiTubanRegistration\Domain\RegistrationDressSize;
 use Danish\IkspiTubanRegistration\Exception\ValidationException;
 use Danish\IkspiTubanRegistration\Model\Registration\RegistrationSaveRequest;
 use Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepository;
@@ -228,7 +229,8 @@ class RegistrationService
             trim($request->fatherName) === '' ||
             trim($request->motherName) === '' ||
             trim($request->coachName) === '' ||
-            trim($request->coachAddress) === ''
+            trim($request->coachAddress) === '' ||
+            trim($request->dressSize) === ''
         ) {
             throw new ValidationException(
                 'Semua kolom wajib diisi.'
@@ -315,6 +317,7 @@ class RegistrationService
 
         $registration->smallPhoto = $smallPhoto;
         $registration->largePhoto = $largePhoto;
+        $registration->dressSize = RegistrationDressSize::from($request->dressSize);
 
         return $registration;
     }

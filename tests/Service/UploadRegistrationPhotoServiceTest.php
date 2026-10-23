@@ -131,26 +131,6 @@ class UploadRegistrationPhotoServiceTest extends TestCase
         $this->service->save($file, 'small');
     }
 
-    public function testSaveLargePhotoWithWrongRatioThrowsException(): void
-    {
-        // Rasio 1:1, padahal foto besar harus 7:10.
-        $file = $this->createImage(300, 300);
-
-        $this->expectException(UploadFileException::class);
-
-        $this->service->save($file, 'large');
-    }
-
-    public function testSaveSmallPhotoWithWrongRatioThrowsException(): void
-    {
-        // Rasio 7:10, padahal foto kecil harus 1:1.
-        $file = $this->createImage(700, 1000);
-
-        $this->expectException(UploadFileException::class);
-
-        $this->service->save($file, 'small');
-    }
-
     public function testSaveWithInvalidPhotoTypeThrowsException(): void
     {
         $file = $this->createImage(300, 300);

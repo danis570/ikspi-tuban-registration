@@ -423,6 +423,8 @@ class AdminRegistrationController extends BaseController
         $request->smallPhoto = $this->getUploadedPhoto('small_photo');
         $request->largePhoto = $this->getUploadedPhoto('large_photo');
 
+        $request->dressSize = trim($_POST['dress_size'] ?? '');
+
         return $request;
     }
 

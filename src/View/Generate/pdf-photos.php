@@ -1,59 +1,100 @@
 <?php
-
-use Danish\IkspiTubanRegistration\Domain\Registration;
-
 /** @var Registration $registration */
 /** @var string $smallPhotoPath */
 /** @var string $largePhotoPath */
+/** @var int $noUrut */
 
-$escape = static fn($value): string => htmlspecialchars(
-    (string) ($value ?? ''),
-    ENT_QUOTES | ENT_SUBSTITUTE,
-    'UTF-8'
-);
+$escape = static fn($value): string => htmlspecialchars((string) ($value ?? ''), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 
-// Konversi cm ke pixel (1cm = 37.795px pada 96 DPI)
-$smallSize = 3 * 37.795; // 3x3 cm = ~113px
-$largeWidth = 7 * 37.795; // 7 cm = ~264px
-$largeHeight = 10 * 37.795; // 10 cm = ~378px
+$getImageBase64 = static function ($path) {
+    if (empty($path) || !file_exists($path))
+        return '';
+    $type = pathinfo($path, PATHINFO_EXTENSION);
+    if ($type === 'jpg')
+        $type = 'jpeg';
+    return 'data:image/' . $type . ';base64,' . base64_encode(file_get_contents($path));
+};
+$imgKecil = $getImageBase64($smallPhotoPath ?? '');
+$imgBesar = $getImageBase64($largePhotoPath ?? '');
+
+$bulanIndo = [1 => 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+$ttlString = '-';
+if (!empty($registration->birthDate)) {
+    try {
+        $dateObj = new DateTime($registration->birthDate);
+        $ttlString = ($registration->birthPlace ?? '-') . ', ' . $dateObj->format('j') . ' ' . $bulanIndo[(int) $dateObj->format('n')] . ' ' . $dateObj->format('Y');
+    } catch (Exception $e) {
+        $ttlString = $registration->birthDate;
+    }
+}
 ?>
 
-<section class="data-page participant-page">
+<!-- Satu Kartu Peserta -->
+<div class="card-item">
+    <!-- TAMPILKAN NOMOR URUT DI SINI -->
+    <h4 style="margin: 0 0 8px 0; font-size: 12px; font-weight: bold;">
+        <?= $noUrut ?>. <?= $escape($registration->fullName) ?>
+    </h4>
 
-    <!-- Jarak dari atas kertas -->
-    <div style="margin-top: 1cm;">
-
-        <h2 style="text-align: center; margin-bottom: 30px; text-decoration: underline;">LAMPIRAN FOTO PESERTA</h2>
-
-        <!-- FOTO KECIL (3x3) -->
-        <div style="text-align: center; margin-bottom: 20px;">
-            <p style="font-weight: bold; margin-bottom: 5px;">Foto Ukuran 3 x 3</p>
-
-            <div
-                style="border: 1px solid #000; width: <?= $smallSize ?>px; height: <?= $smallSize ?>px; margin: 0 auto; overflow: hidden; background-color: #f9f9f9;">
-                <?php if (!empty($smallPhotoPath)): ?>
-                    <img src="<?= $escape($smallPhotoPath) ?>" style="width: 100%; height: 100%; object-fit: cover;"
-                        alt="Foto Kecil">
-                <?php else: ?>
-                    <div style="line-height: <?= $smallSize ?>px; color: #999; font-size: 10px;">Tidak ada foto</div>
-                <?php endif; ?>
-            </div>
-        </div>
-
-        <!-- FOTO BESAR (7x10) -->
-        <div style="text-align: center;">
-            <p style="font-weight: bold; margin-bottom: 5px;">Foto Ukuran 7 x 10</p>
-
-            <div
-                style="border: 1px solid #000; width: <?= $largeWidth ?>px; height: <?= $largeHeight ?>px; margin: 0 auto; overflow: hidden; background-color: #f9f9f9;">
-                <?php if (!empty($largePhotoPath)): ?>
-                    <img src="<?= $escape($largePhotoPath) ?>" style="width: 100%; height: 100%; object-fit: cover;"
-                        alt="Foto Besar">
-                <?php else: ?>
-                    <div style="line-height: <?= $largeHeight ?>px; color: #999; font-size: 10px;">Tidak ada foto</div>
-                <?php endif; ?>
-            </div>
-        </div>
-
+    <!-- Data Diri -->
+    <div class="card-data">
+        <table style="width: 100%; border-collapse: collapse;">
+            <tr>
+                <td style="width: 40%;">Tempat, tanggal lahir</td>
+                <td style="width: 3%;">:</td>
+                <td><?= $escape($ttlString) ?></td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td>:</td>
+                <td><?= $escape($alamatLengkap ?? '-') ?></td>
+            </tr>
+            <tr>
+                <td>Nama ayah</td>
+                <td>:</td>
+                <td><?= $escape($registration->fatherName) ?></td>
+            </tr>
+            <tr>
+                <td>Nama pelatih</td>
+                <td>:</td>
+                <td><?= $escape($registration->coachName) ?></td>
+            </tr>
+            <tr>
+                <td>Asal ranting</td>
+                <td>:</td>
+                <td><?= $escape($asalRanting ?? '-') ?></td>
+            </tr>
+        </table>
     </div>
-</section>
+
+    <!-- Bagian Foto (Kiri & Kanan) -->
+    <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+        <tr>
+            <!-- Foto Kecil: Lebar kolom dibuat lebih kecil (hanya selebar fotonya) -->
+            <td style="width: 100px; vertical-align: top; padding-left: 0px; text-align: left;">
+                <div style="font-weight: bold; font-size: 12px; margin-bottom: 5px;">Foto 3&times;3 cm:</div>
+                <?php if ($imgKecil): ?>
+                    <img src="<?= $imgKecil ?>" class="img-kecil" style="margin: 0;">
+                <?php else: ?>
+                    <div
+                        style="width: 60px; height: 60px; border: 1px solid #ccc; text-align: center; line-height: 60px; background: #eee; font-size: 12px;">
+                        -
+                    </div>
+                <?php endif; ?>
+            </td>
+
+            <!-- Foto Besar: Otomatis akan berada di sebelah kanan foto kecil -->
+            <td style="vertical-align: top; text-align: left; padding-left: 0px;">
+                <div style="font-weight: bold; font-size: 12px; margin-bottom: 5px;">Foto 7&times;10 cm:</div>
+                <?php if ($imgBesar): ?>
+                    <img src="<?= $imgBesar ?>" class="img-besar" style="margin: 0;">
+                <?php else: ?>
+                    <div
+                        style="width: 80px; height: 110px; border: 1px solid #ccc; text-align: center; line-height: 110px; background: #eee; font-size: 12px;">
+                        -
+                    </div>
+                <?php endif; ?>
+            </td>
+        </tr>
+    </table>
+</div>

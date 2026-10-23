@@ -4,8 +4,11 @@ namespace Danish\IkspiTubanRegistration\Service;
 
 use Danish\IkspiTubanRegistration\Config\Database;
 use Danish\IkspiTubanRegistration\Domain\Registration;
+use Danish\IkspiTubanRegistration\Domain\RegistrationDressSize;
 use Danish\IkspiTubanRegistration\Domain\RegistrationPeriod;
 use Danish\IkspiTubanRegistration\Repository\AdministrativeAreaRepository;
+use DateTime;
+use Exception;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Style\Alignment;
 use PhpOffice\PhpSpreadsheet\Style\Border;
@@ -54,145 +57,156 @@ class RegistrationExcelService
 
         $spreadsheet = new Spreadsheet();
         $sheet = $spreadsheet->getActiveSheet();
-
         $sheet->setTitle('Data Pendaftaran');
 
+        // 1. SUSUNAN HEADER BARU
         $headers = [
+            'NO',
             'TINGKAT',
             'ANGKATAN',
-            'TANGGAL PERIODE',
-            'WAKTU PERIODE',
-            'LOKASI PERIODE',
-            'JENIS PERIODE',
-            'KELAS',
-            'WILAYAH PERIODE',
-            'STATUS PERIODE',
-            'INFORMASI TAMBAHAN',
-            'NO',
-            'NAMA LENGKAP',
-            'TEMPAT LAHIR',
-            'TANGGAL LAHIR',
-            'PROVINSI',
-            'KABUPATEN/KOTA',
-            'KECAMATAN',
-            'DESA/KELURAHAN',
-            'RT',
-            'RW',
+            'NAMA',
+            'TEMPAT / TANGGAL LAHIR',
+            'ALAMAT DESA, RT/RW, KECAMATAN',
             'PEKERJAAN',
             'TEMPAT LATIHAN',
-            'NAMA AYAH',
-            'NAMA IBU',
+            'NAMA AYAH KANDUNG',
+            'NAMA IBU KANDUNG',
             'NAMA PELATIH',
             'ALAMAT PELATIH',
+            'UKURAN BAJU', // Kolom M (Judul Utama)
+            '',            // Kolom N (Di-merge)
+            '',            // Kolom O (Di-merge)
+            '',            // Kolom P (Di-merge)
             'FOTO KECIL',
             'FOTO BESAR',
         ];
 
-        $lastColumn = 'AB';
+        // Kolom terakhir sekarang adalah 'R'
+        $lastColumn = 'R';
 
         $sheet->fromArray($headers, null, 'A1');
+
+        // --- MERGE CELL UNTUK HEADER UKURAN BAJU ---
+        $sheet->mergeCells('M1:P1'); // Menggabungkan M1 sampai P1
+
+        // Sub-header untuk baris ke-2
+        $sheet->setCellValue('M2', 'M');
+        $sheet->setCellValue('N2', 'L');
+        $sheet->setCellValue('O2', 'XL');
+        $sheet->setCellValue('P2', 'XXL');
+        // ------------------------------------------
+
+        // --- TAMBAHKAN KODE INI UNTUK MERGE HEADER LAINNYA ---
+        // Daftar kolom yang headernya ingin ditengahkan (A sampai L, lalu Q dan R)
+        $columnsToMerge = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'Q', 'R'];
+
+        foreach ($columnsToMerge as $col) {
+            // Menggabungkan baris 1 dan 2 untuk setiap kolom
+            $sheet->mergeCells("{$col}1:{$col}2");
+        }
+        // ------------------------------------------------------
 
         $areaRepository = new AdministrativeAreaRepository(
             Database::getConnection()
         );
 
-        $row = 2;
+        // Data dimulai dari baris 3 karena header memakan 2 baris
+        $row = 3;
 
         foreach ($registrations as $index => $item) {
             $registration = $item['registration'];
             $period = $item['period'];
 
             $areaNames = [
-                'province' => $areaRepository
-                    ->findByCode($registration->provinceCode)?->name
-                    ?? $registration->provinceCode,
-
-                'regency' => $areaRepository
-                    ->findByCode($registration->regencyCode)?->name
-                    ?? $registration->regencyCode,
-
-                'district' => $areaRepository
-                    ->findByCode($registration->districtCode)?->name
-                    ?? $registration->districtCode,
-
-                'village' => $areaRepository
-                    ->findByCode($registration->villageCode)?->name
-                    ?? $registration->villageCode,
+                'province' => $areaRepository->findByCode($registration->provinceCode)?->name ?? $registration->provinceCode,
+                'regency' => $areaRepository->findByCode($registration->regencyCode)?->name ?? $registration->regencyCode,
+                'district' => $areaRepository->findByCode($registration->districtCode)?->name ?? $registration->districtCode,
+                'village' => $areaRepository->findByCode($registration->villageCode)?->name ?? $registration->villageCode,
             ];
 
-            // Data periode dan peserta mengikuti PDF.
-            $values = [
-                $period->level->value,
-                (string) $period->batch,
-                $period->date->format('d-m-Y'),
-                $period->time,
-                $period->location,
-                $period->type->value,
-                $period->class,
-                $period->region,
-                $period->isActive ? 'Aktif' : 'Tidak aktif',
-                $period->information ?? '-',
-
-                $index + 1,
-                $registration->fullName,
-                $registration->birthPlace,
-                $registration->birthDate,
-                $areaNames['province'],
-                $areaNames['regency'],
-                $areaNames['district'],
-                $areaNames['village'],
-                $registration->rt,
-                $registration->rw,
-                $registration->occupation,
-                $registration->trainingLocation,
-                $registration->fatherName,
-                $registration->motherName,
-                $registration->coachName,
-                $registration->coachAddress,
+            // Format Tanggal Lahir (Contoh: 10 JUNI 2011)
+            $bulanIndo = [
+                1 => 'JANUARI',
+                'FEBRUARI',
+                'MARET',
+                'APRIL',
+                'MEI',
+                'JUNI',
+                'JULI',
+                'AGUSTUS',
+                'SEPTEMBER',
+                'OKTOBER',
+                'NOVEMBER',
+                'DESEMBER'
             ];
 
-            // Ubah semua teks menjadi uppercase, kecuali yang bertipe angka (No)
-            $valuesUppercase = array_map(function ($val) {
-                // Jika tipenya string, ubah ke uppercase. Jika angka, biarkan.
-                return is_string($val) ? strtoupper($val) : $val;
-            }, $values);
-
-            $sheet->fromArray(
-                $valuesUppercase,
-                null,
-                'A' . $row
-            );
-
-            // Pertahankan RT/RW dan data lain sebagai teks.
-            foreach (['S', 'T'] as $column) {
-                $sheet->getCell($column . $row)
-                    ->setValueExplicit(
-                        (string) $sheet->getCell(
-                            $column . $row
-                        )->getValue(),
-                        \PhpOffice\PhpSpreadsheet\Cell\DataType::TYPE_STRING
-                    );
+            $tglLahirIndo = '';
+            if (!empty($registration->birthDate)) {
+                try {
+                    $dateObj = new \DateTime($registration->birthDate);
+                    $tglLahirIndo = $dateObj->format('j') . ' ' . $bulanIndo[(int) $dateObj->format('n')] . ' ' . $dateObj->format('Y');
+                } catch (\Exception $e) {
+                    $tglLahirIndo = $registration->birthDate;
+                }
             }
 
-            $smallPhotoPath = $this->getPhotoPath(
-                $registration->smallPhoto
-            );
+            // Gabungkan Tempat & Tanggal Lahir
+            $ttl = strtoupper($registration->birthPlace . ', ' . $tglLahirIndo);
 
-            $largePhotoPath = $this->getPhotoPath(
-                $registration->largePhoto
-            );
+            // Gabungkan Alamat
+            $alamat = "DS. " . strtoupper($areaNames['village']) . " RT " . $registration->rt . " RW " . $registration->rw . " KEC. " . strtoupper($areaNames['district']) . " KAB. " . strtoupper($areaNames['regency']);
 
+            $dressSize = $registration->dressSize instanceof \Danish\IkspiTubanRegistration\Domain\RegistrationDressSize
+                ? $registration->dressSize->value
+                : null;
+
+            // Tulis nilai 1 atau 0 langsung ke sel Excel M sampai P.
+            $sheet->setCellValue("M{$row}", (int) ($dressSize === 'M'));
+            $sheet->setCellValue("N{$row}", (int) ($dressSize === 'L'));
+            $sheet->setCellValue("O{$row}", (int) ($dressSize === 'XL'));
+            $sheet->setCellValue("P{$row}", (int) ($dressSize === 'XXL'));
+
+            // 2. SUSUNAN NILAI (VALUES) BARU
+            $values = [
+                $index + 1, // NO
+                strtoupper((string) ($period->level->value ?? '')), // TINGKAT
+                strtoupper((string) ($period->batch ?? '')), // ANGKATAN
+                strtoupper((string) ($registration->fullName ?? '')), // NAMA
+                $ttl, // TEMPAT / TANGGAL LAHIR
+                $alamat, // ALAMAT
+                strtoupper((string) ($registration->occupation ?? '')), // PEKERJAAN
+                strtoupper((string) ($registration->trainingLocation ?? '')), // TEMPAT LATIHAN
+                strtoupper((string) ($registration->fatherName ?? '')), // NAMA AYAH
+                strtoupper((string) ($registration->motherName ?? '')), // NAMA IBU
+                strtoupper((string) ($registration->coachName ?? '')), // NAMA PELATIH
+                strtoupper((string) ($registration->coachAddress ?? '')), // ALAMAT PELATIH
+
+            ];
+
+            $sheet->fromArray($values, null, 'A' . $row);
+
+            // Paksa RT/RW (jika ada) jadi teks, dan pastikan angka 0/1 ukuran baju tetap integer
+            $sheet->getStyle("A{$row}:R{$row}")->getNumberFormat()->setFormatCode(\PhpOffice\PhpSpreadsheet\Style\NumberFormat::FORMAT_TEXT);
+
+            // Kembalikan format angka untuk NO dan Ukuran Baju agar tidak error "Number stored as text"
+            $sheet->getStyle("A{$row}")->getNumberFormat()->setFormatCode(\PhpOffice\PhpSpreadsheet\Style\NumberFormat::FORMAT_NUMBER);
+            $sheet->getStyle("M{$row}:P{$row}")->getNumberFormat()->setFormatCode(\PhpOffice\PhpSpreadsheet\Style\NumberFormat::FORMAT_NUMBER);
+
+            $smallPhotoPath = $this->getPhotoPath($registration->smallPhoto);
+            $largePhotoPath = $this->getPhotoPath($registration->largePhoto);
+
+            // 3. KOORDINAT FOTO BARU
             $this->addPhoto(
                 $sheet,
                 $smallPhotoPath,
-                'AA' . $row,
+                'Q' . $row, // Kolom Q
                 70
             );
 
             $this->addPhoto(
                 $sheet,
                 $largePhotoPath,
-                'AB' . $row,
+                'R' . $row, // Kolom R
                 100
             );
 
@@ -204,16 +218,16 @@ class RegistrationExcelService
 
         $lastRow = $row - 1;
 
-        // Header.
-        $sheet->getStyle("A1:{$lastColumn}1")->applyFromArray([
+        // --- HEADER STYLING (Baris 1 & 2) ---
+        $sheet->getStyle("A1:{$lastColumn}2")->applyFromArray([
             'font' => [
                 'bold' => true,
-                'color' => ['rgb' => 'FFFFFF'],
-                'size' => 10,
+                'color' => ['rgb' => '000000'], // Teks hitam
+                'size' => 11,
             ],
             'fill' => [
                 'fillType' => Fill::FILL_SOLID,
-                'startColor' => ['rgb' => '166534'],
+                'startColor' => ['rgb' => '8EA9DB'], // Warna Biru Muda (sesuai gambar)
             ],
             'alignment' => [
                 'horizontal' => Alignment::HORIZONTAL_CENTER,
@@ -223,15 +237,16 @@ class RegistrationExcelService
             'borders' => [
                 'allBorders' => [
                     'borderStyle' => Border::BORDER_THIN,
-                    'color' => ['rgb' => 'D1D5DB'],
+                    'color' => ['rgb' => '000000'], // Garis batas hitam
                 ],
             ],
         ]);
 
-        $sheet->getRowDimension(1)->setRowHeight(36);
+        $sheet->getRowDimension(1)->setRowHeight(30);
+        $sheet->getRowDimension(2)->setRowHeight(30);
 
-        // Isi tabel.
-        $sheet->getStyle("A2:{$lastColumn}{$lastRow}")->applyFromArray([
+        // --- ISI STYLING (Mulai baris 3) ---
+        $sheet->getStyle("A3:{$lastColumn}{$lastRow}")->applyFromArray([
             'alignment' => [
                 'horizontal' => Alignment::HORIZONTAL_CENTER,
                 'vertical' => Alignment::VERTICAL_CENTER,
@@ -240,64 +255,43 @@ class RegistrationExcelService
             'borders' => [
                 'allBorders' => [
                     'borderStyle' => Border::BORDER_THIN,
-                    'color' => ['rgb' => 'D1D5DB'],
+                    'color' => ['rgb' => '000000'], // Garis batas hitam
                 ],
             ],
         ]);
 
-        // Filter dan freeze header.
         $sheet->setAutoFilter("A1:{$lastColumn}{$lastRow}");
-        $sheet->freezePane('A2');
+        $sheet->freezePane('A3'); // Freeze baris 1 dan 2
 
-        // Lebar kolom periode.
+        // 4. LEBAR KOLOM BARU
         $widths = [
-            'A' => 10,
-            'B' => 11,
-            'C' => 16,
-            'D' => 14,
-            'E' => 24,
-            'F' => 18,
-            'G' => 14,
-            'H' => 20,
-            'I' => 16,
-            'J' => 28,
-
-            'K' => 7,
-            'L' => 28,
-            'M' => 18,
-            'N' => 16,
-            'O' => 22,
-            'P' => 24,
-            'Q' => 22,
-            'R' => 22,
-            'S' => 8,
-            'T' => 8,
-            'U' => 20,
-            'V' => 24,
-            'W' => 24,
-            'X' => 24,
-            'Y' => 24,
-            'Z' => 32,
-            'AA' => 14,
-            'AB' => 14,
+            'A' => 5,  // NO
+            'B' => 12, // TINGKAT
+            'C' => 12, // ANGKATAN
+            'D' => 30, // NAMA
+            'E' => 30, // TEMPAT / TANGGAL LAHIR
+            'F' => 45, // ALAMAT
+            'G' => 15, // PEKERJAAN
+            'H' => 20, // TEMPAT LATIHAN
+            'I' => 25, // NAMA AYAH
+            'J' => 25, // NAMA IBU
+            'K' => 25, // NAMA PELATIH
+            'L' => 30, // ALAMAT PELATIH
+            'M' => 10, // M
+            'N' => 10, // L
+            'O' => 10, // XL
+            'P' => 10, // XXL
+            'Q' => 14, // FOTO KECIL
+            'R' => 14, // FOTO BESAR
         ];
 
         foreach ($widths as $column => $width) {
-            $sheet->getColumnDimension($column)
-                ->setWidth($width);
+            $sheet->getColumnDimension($column)->setWidth($width);
         }
 
-        // Pengaturan cetak.
-        $sheet->getPageSetup()
-            ->setOrientation(
-                \PhpOffice\PhpSpreadsheet\Worksheet\PageSetup::ORIENTATION_LANDSCAPE
-            );
-
-        $sheet->getPageSetup()
-            ->setPaperSize(
-                \PhpOffice\PhpSpreadsheet\Worksheet\PageSetup::PAPERSIZE_A3
-            );
-
+        // Pengaturan cetak
+        $sheet->getPageSetup()->setOrientation(\PhpOffice\PhpSpreadsheet\Worksheet\PageSetup::ORIENTATION_LANDSCAPE);
+        $sheet->getPageSetup()->setPaperSize(\PhpOffice\PhpSpreadsheet\Worksheet\PageSetup::PAPERSIZE_A3);
         $sheet->getPageSetup()->setFitToWidth(1);
         $sheet->getPageSetup()->setFitToHeight(0);
         $sheet->getPageSetup()->setFitToPage(true);
@@ -307,17 +301,10 @@ class RegistrationExcelService
         $sheet->getPageMargins()->setLeft(0.2);
         $sheet->getPageMargins()->setRight(0.2);
 
-        $sheet->getHeaderFooter()->setOddHeader(
-            '&C&BDATA PENDAFTARAN PESERTA'
-        );
+        $sheet->getHeaderFooter()->setOddHeader('&C&BDATA PENDAFTARAN PESERTA');
+        $sheet->getHeaderFooter()->setOddFooter('&LPendaftaran Peserta&RHalaman &P dari &N');
 
-        $sheet->getHeaderFooter()->setOddFooter(
-            '&LPendaftaran Peserta&RHalaman &P dari &N'
-        );
-
-        // Menghasilkan file XLSX dalam bentuk string.
         $writer = new Xlsx($spreadsheet);
-
         ob_start();
 
         try {
@@ -325,15 +312,12 @@ class RegistrationExcelService
             $excel = ob_get_clean();
 
             if ($excel === false) {
-                throw new RuntimeException(
-                    'Gagal membuat file Excel.'
-                );
+                throw new RuntimeException('Gagal membuat file Excel.');
             }
 
             return $excel;
         } catch (Throwable $exception) {
             ob_end_clean();
-
             throw $exception;
         } finally {
             $spreadsheet->disconnectWorksheets();

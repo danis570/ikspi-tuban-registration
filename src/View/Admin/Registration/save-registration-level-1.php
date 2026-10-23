@@ -174,7 +174,7 @@
                 <div>
                     <label for="rt"
                         class="block mb-1.5 font-black uppercase text-xs tracking-wider text-text">RT</label>
-                    <input id="rt" type="text" name="rt" value="<?= htmlspecialchars(
+                    <input id="rt" type="number" name="rt" max="999" value="<?= htmlspecialchars(
                         $_POST['rt'] ?? $registration?->rt ?? '',
                         ENT_QUOTES,
                         'UTF-8'
@@ -186,7 +186,7 @@
                 <div>
                     <label for="rw"
                         class="block mb-1.5 font-black uppercase text-xs tracking-wider text-text">RW</label>
-                    <input id="rw" type="text" name="rw" value="<?= htmlspecialchars(
+                    <input id="rw" type="number" name="rw" max="999" value="<?= htmlspecialchars(
                         $_POST['rw'] ?? $registration?->rw ?? '',
                         ENT_QUOTES,
                         'UTF-8'
@@ -316,6 +316,39 @@
                         class="block w-full text-sm text-text-body file:mr-3 file:py-2 file:px-4 file:border-4 file:border-text file:bg-primary file:text-text-invert file:font-black file:uppercase file:text-xs file:tracking-wider file:cursor-pointer file:hover:bg-primary-hover file:transition-colors cursor-pointer"
                         <?= $registration === null ? 'required' : '' ?>>
                 </div>
+            </div>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- UKURAN BAJU                                  -->
+        <!-- ============================================ -->
+        <div class="space-y-4">
+            <h2
+                class="font-black uppercase tracking-wider text-text border-b-2 border-dashed border-border-strong pb-2">
+                Ukuran Baju
+            </h2>
+
+            <div>
+                <label for="dress_size" class="block mb-1.5 font-black uppercase text-xs tracking-wider text-text">
+                    Pilih Ukuran Baju
+                </label>
+
+                <select id="dress_size" name="dress_size"
+                    class="w-full px-4 py-2.5 bg-surface text-text border-4 border-text font-medium text-sm focus:outline-none focus:ring-4 focus:ring-primary-ring focus:border-primary transition-all"
+                    required>
+
+                    <option value="">Pilih ukuran baju</option>
+
+                    <?php foreach (['M', 'L', 'XL', 'XXL'] as $size): ?>
+                        <option value="<?= $size ?>" <?= (
+                              $_POST['dress_size']
+                              ?? $registration?->dressSize?->value
+                              ?? ''
+                          ) === $size ? 'selected' : '' ?>>
+                            <?= $size ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
             </div>
         </div>
 
