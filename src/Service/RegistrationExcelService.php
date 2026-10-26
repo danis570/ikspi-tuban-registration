@@ -154,9 +154,21 @@ class RegistrationExcelService
             $ttl = strtoupper($registration->birthPlace . ', ' . $tglLahirIndo);
 
             // Gabungkan Alamat
-            $alamat = "DS. " . strtoupper($areaNames['village']) . " RT " . $registration->rt . " RW " . $registration->rw . " KEC. " . strtoupper($areaNames['district']) . " KAB. " . strtoupper($areaNames['regency']);
+            $specificAddress = trim($registration->specificAddress ?? '');
 
-            $dressSize = $registration->dressSize instanceof \Danish\IkspiTubanRegistration\Domain\RegistrationDressSize
+            $alamat = '';
+
+            if ($specificAddress !== '') {
+                $alamat .= strtoupper($specificAddress) . ', ';
+            }
+
+            $alamat .= 'DS. ' . strtoupper($areaNames['village'])
+                . ' RT ' . $registration->rt
+                . ' RW ' . $registration->rw
+                . ' KEC. ' . strtoupper($areaNames['district'])
+                . ' KAB. ' . strtoupper($areaNames['regency']);
+
+            $dressSize = $registration->dressSize instanceof RegistrationDressSize
                 ? $registration->dressSize->value
                 : null;
 

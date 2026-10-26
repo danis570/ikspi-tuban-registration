@@ -19,6 +19,7 @@ class Registration
 
     public string $rt;
     public string $rw;
+    public ?string $specificAddress = null;
 
     public string $occupation;
     public string $trainingLocation;

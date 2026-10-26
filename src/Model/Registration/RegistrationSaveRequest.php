@@ -22,6 +22,7 @@ class RegistrationSaveRequest
 
     public ?string $rt = null;
     public ?string $rw = null;
+    public ?string $specificAddress = null;
 
     public ?string $occupation = null;
     public ?string $trainingLocation = null;

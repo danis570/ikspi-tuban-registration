@@ -97,6 +97,7 @@ class RegistrationRepositoryTest extends TestCase
 
         $registration->rt = '001';
         $registration->rw = '002';
+        $registration->specificAddress = 'Dusun Krajan, Jalan Melati No. 12';
 
         $registration->occupation = 'Mahasiswa';
         $registration->trainingLocation = 'Palang';
@@ -131,6 +132,10 @@ class RegistrationRepositoryTest extends TestCase
         self::assertSame($this->userId, $saved->userId);
         self::assertSame($this->periodId, $saved->registrationPeriodId);
         self::assertSame('35.23.18.2019', $saved->villageCode);
+        self::assertSame(
+            'Dusun Krajan, Jalan Melati No. 12',
+            $saved->specificAddress
+        );
     }
 
     public function testUpdateSuccess(): void
@@ -141,6 +146,7 @@ class RegistrationRepositoryTest extends TestCase
 
         $registration->fullName = 'Ahmad Danish Updated';
         $registration->occupation = 'Backend Developer';
+        $registration->specificAddress = 'Jalan Mawar No. 10';
 
         $result = $this->registrationRepository->update($registration);
 
@@ -153,6 +159,24 @@ class RegistrationRepositoryTest extends TestCase
         self::assertNotNull($updated);
         self::assertSame('Ahmad Danish Updated', $updated->fullName);
         self::assertSame('Backend Developer', $updated->occupation);
+        self::assertSame(
+            'Jalan Mawar No. 10',
+            $updated->specificAddress
+        );
+
+    }
+
+    public function testSaveWithoutSpecificAddress(): void
+    {
+        $registration = $this->createRegistration();
+        $registration->specificAddress = null;
+
+        $saved = $this->registrationRepository->save($registration);
+
+        $result = $this->registrationRepository->findById($saved->id);
+
+        self::assertNotNull($result);
+        self::assertNull($result->specificAddress);
     }
 
     public function testUpdateWithoutIdReturnsFalse(): void

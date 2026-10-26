@@ -408,6 +408,10 @@ class AdminRegistrationController extends BaseController
         $request->rt = trim($_POST['rt'] ?? '');
         $request->rw = trim($_POST['rw'] ?? '');
 
+        $request->specificAddress = trim(
+            $_POST['specific_address'] ?? ''
+        );
+
         $request->occupation = trim($_POST['occupation'] ?? '');
         $request->trainingLocation = trim(
             $_POST['training_location'] ?? ''

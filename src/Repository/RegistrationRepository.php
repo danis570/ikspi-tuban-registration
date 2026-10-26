@@ -101,6 +101,7 @@ class RegistrationRepository
                 village_code,
                 rt,
                 rw,
+                specific_address,
                 occupation,
                 training_location,
                 father_name,
@@ -112,7 +113,7 @@ class RegistrationRepository
                 dress_size
             ) VALUES (
                 ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
-                ?, ?, ?, ?, ?, ?, ?, ?, ?
+                ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
             )
         ";
 
@@ -129,6 +130,7 @@ class RegistrationRepository
             $registration->villageCode,
             $registration->rt,
             $registration->rw,
+            $registration->specificAddress,
             $registration->occupation,
             $registration->trainingLocation,
             $registration->fatherName,
@@ -164,6 +166,7 @@ class RegistrationRepository
                 village_code = ?,
                 rt = ?,
                 rw = ?,
+                specific_address = ?,
                 occupation = ?,
                 training_location = ?,
                 father_name = ?,
@@ -189,6 +192,7 @@ class RegistrationRepository
             $registration->villageCode,
             $registration->rt,
             $registration->rw,
+            $registration->specificAddress,
             $registration->occupation,
             $registration->trainingLocation,
             $registration->fatherName,
@@ -318,6 +322,7 @@ class RegistrationRepository
 
         $registration->rt = $row['rt'];
         $registration->rw = $row['rw'];
+        $registration->specificAddress = $row['specific_address'];
 
         $registration->occupation = $row['occupation'];
         $registration->trainingLocation = $row['training_location'];

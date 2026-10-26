@@ -233,7 +233,16 @@ class RegistrationService
             trim($request->dressSize) === ''
         ) {
             throw new ValidationException(
-                'Semua kolom wajib diisi.'
+                'Semua kolom wajib diisi kecuali alamat spesifik.'
+            );
+        }
+
+        if (
+            $request->specificAddress !== null &&
+            mb_strlen($request->specificAddress) > 255
+        ) {
+            throw new ValidationException(
+                'Alamat spesifik maksimal 255 karakter.'
             );
         }
 
@@ -307,6 +316,13 @@ class RegistrationService
 
         $registration->rt = $request->rt;
         $registration->rw = $request->rw;
+
+        $specificAddress = trim($request->specificAddress ?? '');
+
+        $registration->specificAddress = $specificAddress !== ''
+            ? $specificAddress
+            : null;
+
         $registration->occupation = $request->occupation;
         $registration->trainingLocation = $request->trainingLocation;
 

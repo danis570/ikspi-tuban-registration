@@ -395,7 +395,7 @@ class RegistrationServiceTest extends TestCase
 
         $this->expectException(ValidationException::class);
         $this->expectExceptionMessage(
-            'Semua kolom wajib diisi.'
+            'Semua kolom wajib diisi kecuali alamat spesifik.'
         );
 
         $this->service->save($request);
