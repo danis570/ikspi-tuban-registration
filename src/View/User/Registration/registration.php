@@ -40,6 +40,26 @@
                         Registrasi<br>Tingkat <?= htmlspecialchars($period->level->value) ?>
                         Angkatan <?= htmlspecialchars($period->batch) ?>
                     </span>
+                    <?php if (!empty($period->information)): ?>
+
+                        <?php
+                        $items = preg_split(
+                            '/\s*\d+\.\s*/',
+                            trim($period->information),
+                            -1,
+                            PREG_SPLIT_NO_EMPTY
+                        );
+                        ?>
+
+                        <ol class="mt-4 w-full list-decimal list-outside pl-6 space-y-2 text-left text-sm text-white">
+                            <?php foreach ($items as $item): ?>
+                                <li>
+                                    <?= htmlspecialchars(trim($item), ENT_QUOTES, 'UTF-8') ?>
+                                </li>
+                            <?php endforeach; ?>
+                        </ol>
+
+                    <?php endif; ?>
                 </a>
 
             <?php endforeach; ?>
