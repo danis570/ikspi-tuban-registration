@@ -27,8 +27,8 @@ class UploadRegistrationPhotoService
         }
 
         $maxSize = match ($photoType) {
-            self::SMALL_PHOTO => 2 * 1024 * 1024,
-            self::LARGE_PHOTO => 3 * 1024 * 1024,
+            self::SMALL_PHOTO => 25 * 1024 * 1024,
+            self::LARGE_PHOTO => 30 * 1024 * 1024,
             default => throw new UploadFileException(
                 'Jenis foto tidak valid'
             ),
@@ -36,7 +36,7 @@ class UploadRegistrationPhotoService
 
         if ($file->size > $maxSize) {
             throw new UploadFileException(
-                'Ukuran foto melebihi batas maksimal, maksimal foto kecil 2mb foto besar 3mb'
+                'Ukuran foto melebihi batas maksimal, maksimal foto kecil 25mb foto besar 30mb'
             );
         }
 

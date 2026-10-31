@@ -4,7 +4,6 @@ $menus = [
     ['label' => 'Login', 'href' => '/login', 'type' => 'button', 'key' => 'login'],
 ];
 
-// $current di-handle oleh controller, contoh: $current = 'about';
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +14,9 @@ $menus = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?? 'User management Template' ?></title>
 
+    <!-- Tailwind (build dari input.css) -->
     <link rel="stylesheet" href="/assets/output.css">
+
     <!-- Preload Fonts -->
     <link rel="preload" href="/assets/fonts/space-grotesk-v22-latin-regular.woff2" as="font" type="font/woff2"
         crossorigin>
@@ -23,6 +24,8 @@ $menus = [
         crossorigin>
     <link rel="preload" href="/assets/fonts/space-grotesk-v22-latin-500.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/space-grotesk-v22-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/space-grotesk-v22-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+
     <!-- Lucide Icons -->
     <script src="/assets/vendor/lucide.min.js"></script>
 </head>
